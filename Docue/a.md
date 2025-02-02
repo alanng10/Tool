@@ -2,10 +2,7 @@
 
 Tool is tool module list written in Class Lang.
 
-Tool has icon theme that is most general.
-Tool has style that is most general.
-
-Tool has style that has enough level that is easy enough to use.
+Tool has most general and most level style.
 
 Tool is most general.
 
