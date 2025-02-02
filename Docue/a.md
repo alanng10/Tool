@@ -2,8 +2,8 @@
 
 Tool is tool module list written in Class Lang.
 
-Tool has most general and most level style.
+Tool is most general and most level tool.
 
-Tool is most general.
+Tool has most general and most level style.
 
 This is enough infra to make tool of any style.
