@@ -1,5 +1,5 @@
 # Icon
 
-Tool uses icons from Eclipse Images.
+Tool uses icons that is in one whole set.
 
-The selected icons from the entire set are most general for their purposes.
+The icon set is most general and most level icon.
