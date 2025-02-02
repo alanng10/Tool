@@ -5,6 +5,8 @@ Tool is tool module list written in Class Lang.
 Tool has icon theme that is most general.
 Tool has style that is most general.
 
+Tool has style that has enough level that is easy enough to use.
+
 Tool is most general.
 
 This is enough infra to make tool of any style.
