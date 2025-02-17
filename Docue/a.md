@@ -21,3 +21,5 @@ The word third letter "o" is any resulted effect.
 The word fourth letter "l" is any list item.
 
 The word is Node direct resulted execute resulted effect list item.
+
+The word is Thin direct operate execute operate effect list item.
