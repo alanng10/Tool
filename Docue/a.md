@@ -21,3 +21,5 @@ The word second letter "o" refers to operate direct.
 The word third letter "o" refers to operate engin.
 
 The word fourth letter "l" refers to list unite.
+
+The word spell is Thin Any operate direct operate engin list unite.
