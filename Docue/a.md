@@ -20,9 +20,9 @@ The word second letter "o" refers to operate diret.
 
 The word third letter "o" refers to operate engin.
 
-The word fourth letter "l" refers to list unite.
+The word fourth letter "l" refers to list unon.
 
-The word spell is Thin Any operate diret operate engin list unite.
+The word spell is Thin Any operate diret operate engin list unon.
 
 Tool has arch.
 
