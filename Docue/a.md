@@ -23,3 +23,22 @@ The word third letter "o" refers to operate engin.
 The word fourth letter "l" refers to list unite.
 
 The word spell is Thin Any operate direct operate engin list unite.
+
+Tool has arch.
+
+The arch is Model View Plat.
+
+From bottom to top, the first layer is Plat.
+
+The second layer is Model.
+
+The third layer is View.
+
+Class that is tagged with the existence of view is in View.
+
+Class that has effect and its dependent class is in Plat.
+
+Class that stores any or results any is in Model.
+
+Tool main triggers View.
+View may triggers Plat or Model.
