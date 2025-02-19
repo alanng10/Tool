@@ -38,7 +38,7 @@ Class that is tagged with the existence of view is in View.
 
 Class that has effect and its dependent class is in Plat.
 
-Class that stores any or results any is in Model.
+Class that stores any or results any that is not in Plat is in Model.
 
 Tool main triggers View or Plat.
 View may triggers Plat or Model.
