@@ -40,5 +40,5 @@ Class that has effect and its dependent class is in Plat.
 
 Class that stores any or results any is in Model.
 
-Tool main triggers View.
+Tool main triggers View or Plat.
 View may triggers Plat or Model.
