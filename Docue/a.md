@@ -42,3 +42,6 @@ Class that stores any or results any that is not in Plat is in Model.
 
 Tool main triggers View or Plat.
 View may triggers Plat or Model.
+
+Tool import Class compiler module list written in Class Lang to provide
+Class source editing, module making and Class docue viewing.
