@@ -2,9 +2,9 @@
 
 Tool is tool module list written in Class Lang.
 
-Tool can be park tool.
+Tool is park tool.
 
-Tool can have park style.
+Tool has park style.
 
 This is enough infra to make tool of any style.
 
