@@ -8,6 +8,10 @@ Tool can have park style.
 
 This is enough infra to make tool of any style.
 
+Tool has park marry.
+
+Tool has park land.
+
 Tool has park word.
 
 The word is "Tool".
