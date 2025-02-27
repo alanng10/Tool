@@ -12,6 +12,10 @@ Tool has park marry.
 
 Tool has park land.
 
+Tool has park arch.
+
+Tool has park arch worth.
+
 Tool has park word.
 
 The word is "Tool".
@@ -28,11 +32,7 @@ The word fourth letter "l" refers to list unon.
 
 The word spell is Thin Animi operate diret operate engin list unon.
 
-Tool has park arch.
-
-Tool has park arch worth.
-
-The arch is Model View Plat.
+Tool arch is Model View Plat.
 
 From bottom to top, the first layer is Plat.
 
