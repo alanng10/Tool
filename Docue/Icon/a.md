@@ -2,4 +2,4 @@
 
 Tool uses icons that is in one whole set.
 
-The icon set is most general and most level icon.
+The icon set is park icon.
