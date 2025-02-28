@@ -4,10 +4,6 @@ Tool is tool module list written in Class Lang.
 
 Tool is park tool.
 
-Tool has park style.
-
-This is enough infra to make tool of any style.
-
 Tool has park marry.
 
 Tool has park land.
@@ -31,6 +27,10 @@ The word third letter "o" refers to operate engin.
 The word fourth letter "l" refers to list unon.
 
 The word spell is Thin Animi operate diret operate engin list unon.
+
+Tool has park style.
+
+This is enough infra to make tool of any style.
 
 Tool arch is Model View Plat.
 
