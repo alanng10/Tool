@@ -1,53 +1,53 @@
-# Tool
+# Tool 
 
-Tool is tool module list written in Class Lang.
+Tool is tool module list written in Class Lang. 
 
-Tool is park tool.
+Tool is park tool. 
 
-Tool has park marry.
+Tool has park marry. 
 
-Tool has park land.
+Tool has park land. 
 
-Tool has park arch.
+Tool has park arch. 
 
-Tool has park arch worth.
+Tool has park arch worth. 
 
-Tool has park word.
+Tool has park word. 
 
-The word is "Tool".
+The word is "Tool". 
 
-The word has spell.
+The word has spell. 
 
-The word first letter "T" refers to Thin Animi.
+The word first letter "T" refers to Thin Animi. 
 
-The word second letter "o" refers to operate diret.
+The word second letter "o" refers to operate diret. 
 
-The word third letter "o" refers to operate engin.
+The word third letter "o" refers to operate engin. 
 
-The word fourth letter "l" refers to list unon.
+The word fourth letter "l" refers to list unon. 
 
-The word spell is Thin Animi operate diret operate engin list unon.
+The word spell is Thin Animi operate diret operate engin list unon. 
 
-Tool has park style.
+Tool has park style. 
 
-This is enough infra to make tool of any style.
+This is enough infra to make tool of any style. 
 
-Tool arch is Model View Plat.
+Tool arch is Model View Plat. 
 
-From bottom to top, the first layer is Plat.
+From bottom to top, the first layer is Plat. 
 
-The second layer is Model.
+The second layer is Model. 
 
-The third layer is View.
+The third layer is View. 
 
-Class that is tagged with the existence of view is in View.
+Class that is tagged with the existence of view is in View. 
 
-Class that has effect and its dependent class is in Plat.
+Class that has effect and its dependent class is in Plat. 
 
-Class that stores any or results any that is not in Plat is in Model.
+Class that stores any or results any that is not in Plat is in Model. 
 
-Tool main triggers View or Plat.
-View may triggers Plat or Model.
+Tool main triggers View or Plat. 
+View may triggers Plat or Model. 
 
-Tool imports Class compiler module list written in Class Lang to provide
-Class source editing, module making and Class docue viewing.
+Tool imports Class compiler module list written in Class Lang to provide 
+Class source editing, module making and Class docue viewing. 
