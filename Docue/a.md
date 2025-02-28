@@ -4,6 +4,12 @@ Tool is tool module list written in Class Lang.
 
 Tool is park tool.
 
+Tool has park worth.
+
+Tool has park value.
+
+Tool has park benefit.
+
 Tool has park marry.
 
 Tool has park land.
@@ -11,6 +17,22 @@ Tool has park land.
 Tool has park arch.
 
 Tool has park arch worth.
+
+Tool has park kind.
+
+Tool has park kind worth.
+
+Tool has park kind value.
+
+Tool has park kind benefit.
+
+Tool has park kind marry.
+
+Tool has park kind land.
+
+Tool has park kind arch.
+
+Tool has park kind arch worth.
 
 Tool has park word.
 
