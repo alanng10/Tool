@@ -50,11 +50,13 @@ Tool has park kind arch marry.
 
 Tool has park kind arch land.
 
-Tool is did.
-
 Tool has park style.
 
 This is enough infra to make tool of any style.
+
+Tool is did.
+
+Tool style is did.
 
 Tool has park word.
 
