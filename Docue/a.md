@@ -50,6 +50,8 @@ Tool has park kind arch marry.
 
 Tool has park kind arch land.
 
+Tool is did.
+
 Tool has park style.
 
 This is enough infra to make tool of any style.
@@ -69,8 +71,6 @@ The word third letter "o" refers to operate engin.
 The word fourth letter "l" refers to list unon.
 
 The word spell is Thin Animi operate diret operate engin list unon.
-
-Tool is did.
 
 Tool arch is Model View Plat.
 
