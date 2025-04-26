@@ -58,6 +58,8 @@ Tool is did.
 
 Tool style is did.
 
+Tool has major.
+
 Tool has park word.
 
 The word is "Tool".
