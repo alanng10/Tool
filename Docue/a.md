@@ -50,11 +50,11 @@ Tool has park kind arch marry.
 
 Tool has park kind arch land.
 
-Tool has park style.
-
 Tool has park mark.
 
 Tool has park cross.
+
+Tool has park style.
 
 This is enough infra to make tool of any style.
 
