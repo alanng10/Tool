@@ -58,7 +58,7 @@ Tool has park style.
 
 This is enough infra to make tool of any style.
 
-Tool is did. 
+Tool is did.
 
 Tool style is did.
 
