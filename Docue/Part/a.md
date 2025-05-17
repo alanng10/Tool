@@ -17,3 +17,5 @@ Tool has source part.
 Tool has class part.
 
 Tool has docue part.
+
+Tool has find part.
