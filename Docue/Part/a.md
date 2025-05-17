@@ -13,3 +13,7 @@ Tool has termina part.
 Tool has struct part.
 
 Tool has source part.
+
+Tool has class part.
+
+Tool has docue part.
