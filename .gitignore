@@ -1,7 +1,6 @@
 .vscode/
 /Out
 *.jpg
-*.png
 *.bmp
 *.wav
 *.m4a
