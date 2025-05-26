@@ -52,7 +52,7 @@ Tool has park kind arch land.
 
 Tool has park mark.
 
-Tool has park cross. 
+Tool has park cross.
 
 Tool has park style.
 
