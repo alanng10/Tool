@@ -1,4 +1,6 @@
 class Part : View
 {
-
+    field prusate String Name { get { return data; } set { data : value; } }
+    field prusate Icon Icon { get { return data; } set { data : value; } }
+    field prusate View Tool { get { return data; } set { data : value; } }
 }
