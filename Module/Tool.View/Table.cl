@@ -1,4 +1,4 @@
-class GridChild : View
+class Table : View
 {
     maide prusate Bool Init()
     {
