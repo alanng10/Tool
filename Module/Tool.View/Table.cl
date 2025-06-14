@@ -106,8 +106,8 @@ class Table : View
 
         image : part.Icon.Image;
 
-        this.DrawRectA.Pos.Col : 5;
-        this.DrawRectA.Pos.Row : 5;
+        this.DrawRectA.Pos.Col : 4;
+        this.DrawRectA.Pos.Row : 4;
         this.DrawRectA.Size.Wed : image.Size.Wed;
         this.DrawRectA.Size.Het : image.Size.Het;
 
