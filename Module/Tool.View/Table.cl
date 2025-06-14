@@ -120,10 +120,14 @@ class Table : View
 
         this.DrawRectA.Pos.Col : 25;
         this.DrawRectA.Pos.Row : 5;
-        this.DrawRectA.Size.Wed : image.Size.Wed;
-        this.DrawRectA.Size.Het : image.Size.Het;
+        this.DrawRectA.Size.Wed : 70;
+        this.DrawRectA.Size.Het : 15;
 
-        draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, )
+        draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, this.DrawRectA);
+
+        this.Text.Data : null;
+
+        this.StringData.ValueString : null;
 
         return true;
     }
