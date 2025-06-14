@@ -4,12 +4,40 @@ class Table : View
     {
         base.Init();
         this.ToolViewInfra : share ToolViewInfra;
+
+        this.IndexField : this.CreateIndexField();
         return true;
     }
 
-    field precate Infra ToolViewInfra { get { return data; } set { data : value; } }
+    maide precate Field CreateIndexField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
 
     field prusate Array Part { get { return data; } set { data : value; } }
+    field precate Infra ToolViewInfra { get { return data; } set { data : value; } }
+
+    field prusate Field IndexField { get { return data; } set { data : value; } }
+
+    field prusate Int Index
+    {
+        get
+        {
+            return cast Int(this.IndexField.GetAny());
+        }
+        set
+        {
+            this.IndexField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModIndex(var Mod mod)
+    {
+        this.Event(this.IndexField);
+
+        this.Child : cast View(this.List.Get(this.Index));
+        return true;
+    }
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
