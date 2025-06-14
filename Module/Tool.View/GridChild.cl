@@ -9,6 +9,8 @@ class GridChild : View
 
     field precate Infra ToolViewInfra { get { return data; } set { data : value; } }
 
+    field prusate List Part { get { return data; } set { data : value; } }
+
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
         var DrawImage image;
