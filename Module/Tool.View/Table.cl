@@ -98,25 +98,30 @@ class Table : View
         var Part part;
         part : cast Part(this.Part.Get(this.Index));
 
+        image : part.Icon.Image;
+
+        this.DrawRectA.Pos.Col : 4;
+        this.DrawRectA.Pos.Row : 4;
+        this.DrawRectA.Size.Wed : part.Icon.Size.Count;
+        this.DrawRectA.Size.Het : part.Icon.Size.Count;
+
+        this.DrawRectB.Pos.Col : 0;
+        this.DrawRectB.Pos.Row : 0;
+        this.DrawRectB.Size.Wed : part.Icon.Size.Count;
+        this.DrawRectB.Size.Het : part.Icon.Size.Count;
+
+        draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
+
         this.StringData.ValueString : part.Name;
 
         this.Text.Data : this.StringData;
         this.Text.Range.Index : 0;
         this.Text.Range.Count : this.StringComp.Count(part.Name);
 
-        image : part.Icon.Image;
-
-        this.DrawRectA.Pos.Col : 4;
-        this.DrawRectA.Pos.Row : 4;
+        this.DrawRectA.Pos.Col : 25;
+        this.DrawRectA.Pos.Row : 5;
         this.DrawRectA.Size.Wed : image.Size.Wed;
         this.DrawRectA.Size.Het : image.Size.Het;
-
-        this.DrawRectB.Pos.Col : 0;
-        this.DrawRectB.Pos.Row : 0;
-        this.DrawRectB.Size.Wed : image.Size.Wed;
-        this.DrawRectB.Size.Het : image.Size.Het;
-
-        draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
 
         draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, )
 
