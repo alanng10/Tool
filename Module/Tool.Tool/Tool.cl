@@ -5,6 +5,16 @@ class Tool : Any
         return true;
     }
 
+    maide prusate Bool Load()
+    {
+        if (~share ToolViewInfra.Load())
+        {
+            return false;
+        }
+
+        return true;
+    }
+
     maide prusate Bool Execute()
     {
         var PackagePart packagePart;
