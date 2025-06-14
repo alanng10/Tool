@@ -98,8 +98,6 @@ class Table : View
         var Part part;
         part : cast Part(this.Part.Get(this.Index));
 
-        image : part.Icon.Image;
-
         this.DrawRectA.Pos.Col : 4;
         this.DrawRectA.Pos.Row : 4;
         this.DrawRectA.Size.Wed : part.Icon.Size.Count;
@@ -110,7 +108,7 @@ class Table : View
         this.DrawRectB.Size.Wed : part.Icon.Size.Count;
         this.DrawRectB.Size.Het : part.Icon.Size.Count;
 
-        draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
+        draw.ExecuteImage(part.Icon.Image, this.DrawRectA, this.DrawRectB);
 
         this.StringData.ValueString : part.Name;
 
