@@ -9,7 +9,7 @@ class Table : View
 
     field precate Infra ToolViewInfra { get { return data; } set { data : value; } }
 
-    field prusate List Part { get { return data; } set { data : value; } }
+    field prusate Array Part { get { return data; } set { data : value; } }
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
