@@ -6,6 +6,7 @@ class Part : View
         this.ToolViewInfra : share ToolViewInfra;
         return true;
     }
+
     field precate Infra ToolViewInfra { get { return data; } set { data : value; } }
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
