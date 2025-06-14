@@ -1,14 +1,14 @@
-class Part : View
+class Part : ToolPart
 {
     maide prusate Bool Init()
     {
         base.Init();
-        this.ToolViewInfra : share ToolViewInfra;
+        this.Name : "Package";
+        this.Icon : this.ToolViewInfra.IconPackageList;
         return true;
     }
 
     field prusate String Name { get { return data; } set { data : value; } }
     field prusate Icon Icon { get { return data; } set { data : value; } }
     field prusate View Tool { get { return data; } set { data : value; } }
-    field precate ToolViewInfra ToolViewInfra { get { return data; } set { data : value; } }
 }
