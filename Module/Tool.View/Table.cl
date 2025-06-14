@@ -14,7 +14,7 @@ class Table : View
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
         var DrawImage image;
-        image : this.ToolViewInfra.PartTableImage;
+        image : this.ToolViewInfra.ImagePartTable;
 
         this.DrawRectA.Pos.Col : 0;
         this.DrawRectA.Pos.Row : 0;
