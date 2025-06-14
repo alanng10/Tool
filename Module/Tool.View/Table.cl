@@ -3,8 +3,9 @@ class Table : View
     maide prusate Bool Init()
     {
         base.Init();
-        this.StringComp : share StringComp;
         this.ToolViewInfra : share ToolViewInfra;
+        this.StringComp : share StringComp;
+        this.DrawAlignList : share DrawAlignList;
 
         this.IndexField : this.CreateIndexField();
         this.Text : this.CreateText();
@@ -36,8 +37,9 @@ class Table : View
     }
 
     field prusate Array Part { get { return data; } set { data : value; } }
-    field precate StringComp StringComp { get { return data; } set { data : value; } }
     field precate Infra ToolViewInfra { get { return data; } set { data : value; } }
+    field precate StringComp StringComp { get { return data; } set { data : value; } }
+    field precate DrawAlignList DrawAlignList { get { return data; } set { data : value; } }
     field precate TextText Text { get { return data; } set { data : value; } }
     field precate StringData StringData { get { return data; } set { data : value; } }
 
@@ -91,7 +93,7 @@ class Table : View
         this.DrawRectB.Size.Wed : image.Size.Wed;
         this.DrawRectB.Size.Het : image.Size.Het;
 
-        draw.ExecuteImage(this.ToolView. this.DrawRectA, this.DrawRectB);
+        draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
 
         var Part part;
         part : cast Part(this.Part.Get(this.Index));
@@ -102,7 +104,21 @@ class Table : View
         this.Text.Range.Index : 0;
         this.Text.Range.Count : this.StringComp.Count(part.Name);
 
-        draw.ExecuteText(this.Text)
+        image : part.Icon.Image;
+
+        this.DrawRectA.Pos.Col : 5;
+        this.DrawRectA.Pos.Row : 5;
+        this.DrawRectA.Size.Wed : image.Size.Wed;
+        this.DrawRectA.Size.Het : image.Size.Het;
+
+        this.DrawRectB.Pos.Col : 0;
+        this.DrawRectB.Pos.Row : 0;
+        this.DrawRectB.Size.Wed : image.Size.Wed;
+        this.DrawRectB.Size.Het : image.Size.Het;
+
+        draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
+
+        draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, )
 
         return true;
     }
