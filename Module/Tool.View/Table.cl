@@ -3,9 +3,12 @@ class Table : View
     maide prusate Bool Init()
     {
         base.Init();
+        this.StringComp : share StringComp;
         this.ToolViewInfra : share ToolViewInfra;
 
         this.IndexField : this.CreateIndexField();
+        this.Text : this.CreateText();
+        this.StringData : this.CreateStringData();
         return true;
     }
 
@@ -14,8 +17,29 @@ class Table : View
         return this.ViewInfra.FieldCreate(this);
     }
 
+    maide precate TextText CreateText()
+    {
+        var TextText a;
+        a : new TextText;
+        a.Init();
+        a.Range : new Range;
+        a.Range.Init();
+        return a;
+    }
+
+    maide precate StringData CreateStringData()
+    {
+        var StringData a;
+        a : new StringData;
+        a.Init();
+        return a;
+    }
+
     field prusate Array Part { get { return data; } set { data : value; } }
+    field precate StringComp StringComp { get { return data; } set { data : value; } }
     field precate Infra ToolViewInfra { get { return data; } set { data : value; } }
+    field precate TextText Text { get { return data; } set { data : value; } }
+    field precate StringData StringData { get { return data; } set { data : value; } }
 
     field prusate Field IndexField { get { return data; } set { data : value; } }
 
@@ -68,6 +92,17 @@ class Table : View
         this.DrawRectB.Size.Het : image.Size.Het;
 
         draw.ExecuteImage(this.ToolView. this.DrawRectA, this.DrawRectB);
+
+        var Part part;
+        part : cast Part(this.Part.Get(this.Index));
+
+        this.StringData.ValueString : part.Name;
+
+        this.Text.Data : this.StringData;
+        this.Text.Range.Index : 0;
+        this.Text.Range.Count : this.StringComp.Count(part.Name);
+
+        draw.ExecuteText(this.Text)
 
         return true;
     }
