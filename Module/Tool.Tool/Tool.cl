@@ -31,6 +31,10 @@ class Tool : Any
         table.Init();
         table.Part : array;
         table.Index : 0;
+        table.Pos.Col : 100;
+        table.Pos.Row : 100;
+        table.Size.Wed : 500;
+        table.Size.Het : 300;
 
         var Frame frame;
         frame : new Frame;
