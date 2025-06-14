@@ -39,6 +39,19 @@ class Table : View
         return true;
     }
 
+    maide precate Bool ValidDraw()
+    {
+        inf (~base.ValidDraw())
+        {
+            return false;
+        }
+
+        var Part part;
+        part : cast Part(this.Part.Get(this.Index));
+
+        return ~(part = null);
+    }
+
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
         var DrawImage image;
