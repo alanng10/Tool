@@ -7,6 +7,7 @@
 
     <ItemGroup>
         <ProjectReference Include="../Z.Tool.Tool.IconList/Z.Tool.Tool.IconList.csproj" />
+        <ProjectReference Include="../Z.Tool.Tool.IconData/Z.Tool.Tool.IconData.csproj" />
     </ItemGroup>
 
 </Project>
