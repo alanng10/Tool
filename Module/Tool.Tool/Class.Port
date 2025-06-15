@@ -6,6 +6,8 @@ System.Infra
     Bool Bool
 Tool.Icon:0.00.00
     IconList IconList
+Tool.View:0.00.00
+    ToolViewInfra Infra
 Tool.Package:0.00.00
     PackagePart Part
 
