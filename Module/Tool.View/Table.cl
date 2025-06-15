@@ -119,11 +119,15 @@ class Table : View
         this.DrawRectA.Size.Wed : 70;
         this.DrawRectA.Size.Het : 15;
 
+        draw.Font : this.Palete.FontMono;
+
         draw.Line : this.DrawInfra.SlashWhite;
 
         draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, this.DrawRectA);
 
         draw.Line : null;
+
+        draw.Font : null;
 
         this.Text.Data : null;
 
