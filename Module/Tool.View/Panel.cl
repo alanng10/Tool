@@ -8,7 +8,7 @@ class Panel : Grid
         count : this.Command.Count;
 
         var Int wed;
-        wed : 16 + 4;
+        wed : 16 + 9;
 
         var Int het;
         het : 16 + 4;
