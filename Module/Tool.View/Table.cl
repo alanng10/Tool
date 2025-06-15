@@ -3,7 +3,7 @@ class Table : View
     maide prusate Bool Init()
     {
         base.Init();
-        this.ToolViewInfra : share ToolViewInfra;
+        this.ToolViewInfra : share Infra;
         this.StringComp : share StringComp;
         this.DrawAlignList : share DrawAlignList;
 
