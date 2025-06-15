@@ -1,0 +1,34 @@
+[Module]
+Tool.View:0.00.00
+
+[Import]
+System.Infra
+    Any Any
+    Bool Bool
+    Int Int
+    String String
+    Range Range
+System.List
+    Array Array
+System.Text
+    TextText Text
+    StringData StringData
+    StringComp StringComp
+View.Draw:0.00.00
+    DrawImage Image
+    DrawAlignList AlignList
+    DrawInfra Infra
+View.View:0.00.00
+    View View
+Tool.Icon:0.00.00
+    Icon Icon
+
+[Export]
+Part
+Table
+Infra
+
+[Storage]
+Data:Data
+
+[Entry]
