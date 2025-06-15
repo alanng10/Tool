@@ -26,6 +26,7 @@ View.View:0.00.00
     View View
 Tool.Icon:0.00.00
     Icon Icon
+    IconList IconList
 
 [Export]
 Part
