@@ -20,6 +20,9 @@ Type.Type:0.00.00
 View.Frame:0.00.00
     Frame Frame
 View.View:0.00.00
+    Grid Grid
+    GridChild GridChild
+    Count Count
     ViewInfra Infra
 Tool.Icon:0.00.00
     Icon Icon
