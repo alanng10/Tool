@@ -1,1 +1,15 @@
 PackageList s
+ToolNew s
+Save s
+SaveAll s
+Undo s
+Redo s
+Execute s
+PackageNew s
+ClassNew s
+OpenClass s
+Find s
+LabelNext s
+LabelPrev s
+Back s
+Front s
