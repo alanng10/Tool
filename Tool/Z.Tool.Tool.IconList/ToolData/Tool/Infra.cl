@@ -16,8 +16,6 @@ class IconList : Any
         var String path;
         path : "Tool.Icon-0.00.00.data/Data/Icon/data.dat";
 
-        var Image k;
-
         var Storage storage;
         storage : new Storage;
         storage.Init();
