@@ -9,8 +9,14 @@ System.Infra
     String String
 System.List
     Array Array
+System.Stream
+    Stream Stream
+System.Storage
+    Storage Storage
+    StorageMode Mode
 View.Draw:0.00.00
     DrawImage Image
+    DrawImageRead ImageRead
     DrawInfra Infra
 
 [Export]
