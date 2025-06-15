@@ -1,4 +1,5 @@
 global using String = Avalon.Infra.String;
+global using Data = Avalon.Infra.Data;
 global using Array = Avalon.List.Array;
 global using Text = Avalon.Text.Text;
 global using EntryEntry = Avalon.Entry.Entry;
