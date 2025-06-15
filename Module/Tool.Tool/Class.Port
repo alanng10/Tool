@@ -8,6 +8,7 @@ System.Infra
     Int Int
 System.List
     Array Array
+    ListInfra Infra
 System.Thread
     ThreadThis This
 System.Entry

@@ -2,8 +2,12 @@ class Tool : Any
 {
     maide prusate Bool Init()
     {
+        base.Init();
+        this.ListInfra : share ListInfra;
         return true;
     }
+
+    field precate ListInfra ListInfra { get { return data; } set { data : value; } }
 
     maide prusate Bool Load()
     {
