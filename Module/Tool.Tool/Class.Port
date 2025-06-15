@@ -13,6 +13,10 @@ System.Thread
     ThreadThis This
 System.Entry
     EntryEntry Entry
+Type.Type:0.00.00
+    TypeType Type
+    TypeIndex Index
+    TypeIndexList IndexList
 View.Frame:0.00.00
     Frame Frame
 Tool.Icon:0.00.00
