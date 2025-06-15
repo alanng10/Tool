@@ -81,8 +81,8 @@ class Table : View
         var DrawImage image;
         image : this.ToolViewInfra.ImagePartTable;
 
-        this.DrawRectA.Pos.Col : 0;
-        this.DrawRectA.Pos.Row : 0;
+        this.DrawRectA.Pos.Col : this.Pos.Col;
+        this.DrawRectA.Pos.Row : this.Pos.Row;
         this.DrawRectA.Size.Wed : image.Size.Wed;
         this.DrawRectA.Size.Het : image.Size.Het;
 
@@ -96,8 +96,8 @@ class Table : View
         var Part part;
         part : cast Part(this.Part.Get(this.Index));
 
-        this.DrawRectA.Pos.Col : 4;
-        this.DrawRectA.Pos.Row : 4;
+        this.DrawRectA.Pos.Col : this.Pos.Col + 4;
+        this.DrawRectA.Pos.Row : this.Pos.Row + 4;
         this.DrawRectA.Size.Wed : part.Icon.Size.Count;
         this.DrawRectA.Size.Het : part.Icon.Size.Count;
 
@@ -114,12 +114,16 @@ class Table : View
         this.Text.Range.Index : 0;
         this.Text.Range.Count : this.StringComp.Count(part.Name);
 
-        this.DrawRectA.Pos.Col : 25;
-        this.DrawRectA.Pos.Row : 5;
+        this.DrawRectA.Pos.Col : this.Pos.Col + 25;
+        this.DrawRectA.Pos.Row : this.Pos.Row + 5;
         this.DrawRectA.Size.Wed : 70;
         this.DrawRectA.Size.Het : 15;
 
+        draw.Line : this.DrawInfra.SlashWhite;
+
         draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, this.DrawRectA);
+
+        draw.Line : null;
 
         this.Text.Data : null;
 
