@@ -56,7 +56,7 @@ class IconList : Any
 
     maide precate Bool LoadIcon(var DrawImageRead imageRead)
     {
-        #Load#
+#Load#
         return true;
     }
 
