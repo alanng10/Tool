@@ -4,12 +4,14 @@ class Tool : Any
     {
         base.Init();
         this.ListInfra : share ListInfra;
+        this.ViewInfra : share ViewInfra;
         return true;
     }
 
     field prusate Frame Frame { get { return data; } set { data : value; } }
     field prusate ThreadThis ThreadThis { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
+    field precate ViewInfra ViewInfra { get { return data; } set { data : value; } }
 
     maide prusate Bool Load()
     {
@@ -39,6 +41,7 @@ class Tool : Any
 
         var Table table;
         table : new Table;
+        table.Palete : this.ViewInfra.PaleteDefault;
         table.Init();
         table.Part : array;
         table.Index : 0;

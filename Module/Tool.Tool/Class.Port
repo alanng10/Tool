@@ -19,6 +19,8 @@ Type.Type:0.00.00
     TypeIndexList IndexList
 View.Frame:0.00.00
     Frame Frame
+View.View:0.00.00
+    ViewInfra Infra
 Tool.Icon:0.00.00
     IconList IconList
 Tool.View:0.00.00
