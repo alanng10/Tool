@@ -14,6 +14,7 @@ System.Stream
 System.Storage
     Storage Storage
     StorageMode Mode
+    StorageStatusList StatusList
 View.Draw:0.00.00
     DrawImage Image
     DrawImageRead ImageRead
