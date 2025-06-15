@@ -1,0 +1,25 @@
+[Module]
+Tool.Icon:0.00.00
+
+[Import]
+System.Infra
+    Any Any
+    Bool Bool
+    Int Int
+    String String
+System.List
+    Array Array
+View.Draw:0.00.00
+    DrawImage Image
+    DrawInfra Infra
+
+[Export]
+Icon
+IconList
+IconSize
+IconSizeList
+
+[Storage]
+Data:Data
+
+[Entry]
