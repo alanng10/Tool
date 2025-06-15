@@ -10,6 +10,7 @@ System.Infra
     Range Range
 System.List
     Array Array
+    ListInfra Infra
 System.Text
     TextText Text
     StringData StringData
@@ -22,8 +23,11 @@ View.Draw:0.00.00
 View.Infra:0.00.00
     Field Field
     Mod Mod
+    Count Count
 View.View:0.00.00
     View View
+    Grid Grid
+    GridChild GridChild
 Tool.Icon:0.00.00
     Icon Icon
     IconList IconList
