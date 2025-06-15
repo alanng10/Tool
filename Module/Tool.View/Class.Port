@@ -18,6 +18,8 @@ View.Draw:0.00.00
     DrawImage Image
     DrawAlignList AlignList
     DrawInfra Infra
+View.Infra:0.00.00
+    Field Field
 View.View:0.00.00
     View View
 Tool.Icon:0.00.00
