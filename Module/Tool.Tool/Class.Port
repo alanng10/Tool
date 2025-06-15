@@ -25,6 +25,7 @@ Tool.Icon:0.00.00
     IconInfra Infra
 Tool.View:0.00.00
     Table Table
+    Command Command
     ToolViewInfra Infra
 Tool.Package:0.00.00
     PackagePart Part
@@ -32,6 +33,8 @@ Tool.Package:0.00.00
 [Export]
 Tool
 Entry
+Panel
+Type
 
 [Storage]
 

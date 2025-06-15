@@ -1,4 +1,4 @@
-class MainPanel : Panel
+class Panel : ToolPanel
 {
     maide prusate Bool Init()
     {
