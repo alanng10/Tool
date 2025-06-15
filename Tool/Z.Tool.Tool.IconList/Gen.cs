@@ -14,6 +14,8 @@ public class Gen : SourceGen
         this.Export = true;
         this.ItemListFileName = this.S("ToolData/Tool/ItemListIcon.txt");
         this.AddMethodFileName = this.S("ToolData/Tool/AddMaideIcon.txt");
+        this.InitMethodFileName = this.S("ToolData/Tool/InitMaideIcon.txt");
+        this.ArrayCompListFileName = this.S("ToolData/Tool/ArrayCompListIcon.txt");
         this.OutputFilePath = this.S("../../Module/Tool.Icon/IconList.cl");
         return true;
     }
