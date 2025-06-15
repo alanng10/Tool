@@ -1,5 +1,13 @@
 class Command : View
 {
+    maide prusate Bool Init()
+    {
+        base.Init();
+        this.Size.Wed : this.Icon.Size.Count;
+        this.Size.Het : this.Icon.Size.Count;
+        return true;
+    }
+
     field prusate Icon Icon { get { return data; } set { data : value; } }
 
     maide prusate Bool Execute()
