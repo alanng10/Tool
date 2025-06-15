@@ -15,7 +15,7 @@ class Tool : Any
 
     maide prusate Bool Load()
     {
-        inf (~share IconList.Load())
+        inf (~share IconInfra.Load())
         {
             return false;
         }
