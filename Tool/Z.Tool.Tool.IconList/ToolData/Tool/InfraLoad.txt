@@ -1,0 +1,5 @@
+        this.IconList.#Name#.Image : this.ImageRead(imageRead);
+        inf (this.IconList.#Name.Image = null)
+        {
+            return false;
+        }
