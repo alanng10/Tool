@@ -4,11 +4,13 @@ class Infra : Any
     {
         base.Init();
         this.DrawInfra : share DrawInfra;
+        this.StorageStatusList : share StorageStatusList;
         this.IconList : share IconList;
         return true;
     }
 
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
+    field precate StorageStatusList StorageStatusList { get { return data; } set { data : value; } }
     field precate IconList IconList { get { return data; } set { data : value; } }
 
     maide prusate Bool Load()
