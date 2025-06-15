@@ -6,4 +6,20 @@ class Command : View
     {
         return true;
     }
+
+    maide precate Bool ExecuteDrawThis(var Draw draw)
+    {
+        this.DrawRectA.Pos.Col : this.Pos.Col;
+        this.DrawRectA.Pos.Row : this.Pos.Row;
+        this.DrawRectA.Size.Wed : this.Icon.Size.Count;
+        this.DrawRectA.Size.Het : this.Icon.Size.Count;
+
+        this.DrawRectB.Pos.Col : 0;
+        this.DrawRectB.Pos.Row : 0;
+        this.DrawRectB.Size.Wed : this.Icon.Size.Count;
+        this.DrawRectB.Size.Het : this.Icon.Size.Count;
+
+        draw.ExecuteImage(this.Icon.Image, this.DrawRectA, this.DrawRectB);
+        return true;
+    }
 }
