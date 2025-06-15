@@ -123,13 +123,13 @@ class Infra : Any
         {
             return false;
         }
-        this.IconList.Back.Image : this.ImageRead(imageRead);
-        inf (this.IconList.Back.Image = null)
+        this.IconList.Prev.Image : this.ImageRead(imageRead);
+        inf (this.IconList.Prev.Image = null)
         {
             return false;
         }
-        this.IconList.Front.Image : this.ImageRead(imageRead);
-        inf (this.IconList.Front.Image = null)
+        this.IconList.Next.Image : this.ImageRead(imageRead);
+        inf (this.IconList.Next.Image = null)
         {
             return false;
         }
