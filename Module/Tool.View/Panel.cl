@@ -56,7 +56,7 @@ class Panel : Grid
             i : i + 1;
         }
 
-        this.Back : this.Palete.Back;
+        this.Back : this.Palete.Back.Brush;
 
         this.Size.Wed : count * wed;
         this.Size.Het : het;
