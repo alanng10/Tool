@@ -11,5 +11,5 @@ OpenClass s
 Find s
 LabelNext s
 LabelPrev s
-Back s
-Front s
+Prev s
+Next s
