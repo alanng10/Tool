@@ -50,6 +50,56 @@ class Tool : Any
         table.Size.Wed : 500;
         table.Size.Het : 300;
 
+        var Grid grid;
+        grid : new Grid;
+        grid.Init();
+
+        var Count colA;
+        colA : new Count;
+        colA.Init();
+        colA.Value: 400;
+
+        var Count rowA;
+        rowA : new Count;
+        rowA.Init();
+        rowA.Value: 50;
+
+        var Count rowB;
+        rowB : new Count;
+        rowB.Init();
+        rowB.Value: 100;
+
+        grid.Col.Add(colA);
+        grid.Row.Add(rowA);
+        grid.Row.Add(rowB);
+
+        var Panel panel
+        panel : new Panel;
+        panel.Init();
+        panel.Pos.Col : 0;
+        panel.Pos.Row : 0;
+
+        var GridChild childA;
+        childA : new GridChild;
+        childA.Init();
+        childA.Rect.Pos.Col : 0;
+        childA.Rect.Pos.Row : 0;
+        childA.Rect.Size.Wed : 1;
+        childA.Rect.Size.Het : 1;
+        childA.View : panel;
+
+        var GridChild childB;
+        childB : new GridChild;
+        childB.Init();
+        childB.Rect.Pos.Col : 0;
+        childB.Rect.Pos.Row : 1;
+        childB.Rect.Size.Wed : 1;
+        childB.Rect.Size.Het : 1;
+        childB.View : table;
+
+        grid.ChildList.Add(childA);
+        grid.ChildList.Add(childB);
+
         this.ThreadThis : new ThreadThis;
         this.ThreadThis.Init();
 
@@ -63,7 +113,7 @@ class Tool : Any
 
         this.Frame.Type : type;
 
-        this.Frame.View : table;
+        this.Frame.View : grid;
 
         this.Frame.Shown : true;
 
