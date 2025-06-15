@@ -7,6 +7,8 @@ class Tool : Any
         return true;
     }
 
+    field prusate Frame Frame { get { return data; } set { data : value; } }
+    field prusate ThreadThis ThreadThis { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
 
     maide prusate Bool Load()
@@ -45,21 +47,26 @@ class Tool : Any
         table.Size.Wed : 500;
         table.Size.Het : 300;
 
-        var Frame frame;
-        frame : new Frame;
-        frame.Init();
+        this.ThreadThis : new ThreadThis;
+        this.ThreadThis.Init();
 
-        frame.View : table;
+        var Type type;
+        type : new Type;
+        type.Init();
+        type.Tool : this;
 
-        frame.Shown : true;
+        this.Frame : new Frame;
+        this.Frame.Init();
 
-        var ThreadThis threadThis;
-        threadThis : new ThreadThis;
-        threadThis.Init();
+        this.Frame.Type : type;
 
-        threadThis.Thread.ExecuteMain();
+        this.Frame.View : table;
 
-        frame.Final();
+        this.Frame.Shown : true;
+
+        this.ThreadThis.Thread.ExecuteMain();
+
+        this.Frame.Final();
         return true;
     }
 }
