@@ -14,7 +14,7 @@ class IconList : Any
     maide prusate Bool Load()
     {
         var String path;
-        path : "Tool.Icon-0.00.00.data/Data/Icon/data.dat";
+        path : "Tool.Icon-0.00.00.data/Icon/data.dat";
 
         var Storage storage;
         storage : new Storage;
