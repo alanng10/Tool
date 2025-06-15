@@ -73,7 +73,7 @@ class Tool : Any
         grid.Row.Add(rowA);
         grid.Row.Add(rowB);
 
-        var Panel panel
+        var Panel panel;
         panel : new Panel;
         panel.Init();
         panel.Pos.Col : 0;
