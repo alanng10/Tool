@@ -21,10 +21,12 @@ class IconList : Any
         var Storage storage;
         storage : new Storage;
         storage.Init();
+
         var StorageMode mode;
         mode : new StorageMode;
         mode.Init();
         mode.Read : true;
+
         storage.Path : path;
         storage.Mode : mode;
 
