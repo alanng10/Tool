@@ -1,4 +1,4 @@
-class IconList : Any
+class Infra : Any
 {
     maide prusate Bool Init()
     {
