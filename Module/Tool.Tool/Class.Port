@@ -1,0 +1,17 @@
+[Module]
+Tool.Tool:0.00.00
+
+[Import]
+System.Infra
+    Bool Bool
+Tool.Icon:0.00.00
+    IconList IconList
+Tool.Package:0.00.00
+    PackagePart Part
+
+[Export]
+Tool
+
+[Storage]
+
+[Entry]

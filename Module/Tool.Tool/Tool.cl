@@ -7,7 +7,12 @@ class Tool : Any
 
     maide prusate Bool Load()
     {
-        if (~share ToolViewInfra.Load())
+        inf (~share IconList.Load())
+        {
+            return false;
+        }
+        
+        inf (~share ToolViewInfra.Load())
         {
             return false;
         }
