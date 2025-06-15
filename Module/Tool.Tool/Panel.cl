@@ -21,8 +21,8 @@ class Panel : ToolPanel
         this.AddCommand(this.IconList.Find);
         this.AddCommand(this.IconList.LabelNext);
         this.AddCommand(this.IconList.LabelPrev);
-        this.AddCommand(this.IconList.Back);
-        this.AddCommand(this.IconList.Front);
+        this.AddCommand(this.IconList.Prev);
+        this.AddCommand(this.IconList.Next);
 
         this.Set();
 
