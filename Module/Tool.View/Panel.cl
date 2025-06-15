@@ -7,15 +7,21 @@ class Panel : Grid
         var Int count;
         count : this.Command.Count;
 
+        var Int wed;
+        wed : 16 + 4;
+
+        var Int het;
+        het : 16 + 4;
+
         var Count col;
         col : new Count;
         col.Init();
-        col.Value : 16 + 4;
+        col.Value : wed;
 
         var Count row;
         row : new Count;
         row.Init();
-        row.Value : 16 + 4;
+        row.Value : het;
 
         var Int i;
         i : 0;
@@ -49,6 +55,11 @@ class Panel : Grid
 
             i : i + 1;
         }
+
+        this.Back : this.Palete.Back;
+
+        this.Size.Wed : count * wed;
+        this.Size.Het : het;
 
         return true;
     }
