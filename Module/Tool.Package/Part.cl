@@ -4,7 +4,7 @@ class Part : ToolPart
     {
         base.Init();
         this.Name : "Package";
-        this.Icon : this.IconList.IconPackageList;
+        this.Icon : this.IconList.PackageList;
         return true;
     }
 }
