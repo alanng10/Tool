@@ -21,8 +21,8 @@ class IconList : Any
         this.Find : this.AddItem(this.IconSizeList.Small);
         this.LabelNext : this.AddItem(this.IconSizeList.Small);
         this.LabelPrev : this.AddItem(this.IconSizeList.Small);
-        this.Back : this.AddItem(this.IconSizeList.Small);
-        this.Front : this.AddItem(this.IconSizeList.Small);
+        this.Prev : this.AddItem(this.IconSizeList.Small);
+        this.Next : this.AddItem(this.IconSizeList.Small);
         return true;
     }
 
@@ -39,8 +39,8 @@ class IconList : Any
     field prusate Icon Find { get { return data; } set { data : value; } }
     field prusate Icon LabelNext { get { return data; } set { data : value; } }
     field prusate Icon LabelPrev { get { return data; } set { data : value; } }
-    field prusate Icon Back { get { return data; } set { data : value; } }
-    field prusate Icon Front { get { return data; } set { data : value; } }
+    field prusate Icon Prev { get { return data; } set { data : value; } }
+    field prusate Icon Next { get { return data; } set { data : value; } }
 
     maide precate Icon AddItem(var IconSize size)
     {
