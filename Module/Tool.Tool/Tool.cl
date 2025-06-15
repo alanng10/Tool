@@ -55,7 +55,7 @@ class Tool : Any
         threadThis : new ThreadThis;
         threadThis.Init();
 
-        threadThis.ExecuteMain();
+        threadThis.Thread.ExecuteMain();
 
         frame.Final();
         return true;
