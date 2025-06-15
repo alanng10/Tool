@@ -14,6 +14,14 @@ class MainPanel : Panel
         this.AddCommand(this.IconList.Undo);
         this.AddCommand(this.IconList.Redo);
         this.AddCommand(this.IconList.Execute);
+        this.AddCommand(this.IconList.PackageNew);
+        this.AddCommand(this.IconList.ClassNew);
+        this.AddCommand(this.IconList.OpenClass);
+        this.AddCommand(this.IconList.Find);
+        this.AddCommand(this.IconList.LabelNext);
+        this.AddCommand(this.IconList.LabelPrev);
+        this.AddCommand(this.IconList.Back);
+        this.AddCommand(this.IconList.Front);
 
         base.Init();
         return true;
