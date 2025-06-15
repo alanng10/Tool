@@ -51,6 +51,8 @@ class Tool : Any
 
         frame.View : table;
 
+        frame.Shown : true;
+
         var ThreadThis threadThis;
         threadThis : new ThreadThis;
         threadThis.Init();
