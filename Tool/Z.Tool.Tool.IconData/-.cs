@@ -1,7 +1,11 @@
 global using String = Avalon.Infra.String;
+global using Range = Avalon.Infra.Range;
 global using Data = Avalon.Infra.Data;
 global using Array = Avalon.List.Array;
 global using Text = Avalon.Text.Text;
+global using Storage = Avalon.Storage.Storage;
+global using StorageMode = Avalon.Storage.Mode;
+global using StorageStatusList = Avalon.Storage.StatusList;
 global using EntryEntry = Avalon.Entry.Entry;
 global using ToolBase = Z.Infra.Infra.Base;
 global using STAThreadAttribute = System.STAThreadAttribute;
