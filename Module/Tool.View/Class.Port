@@ -23,11 +23,11 @@ View.Draw:0.00.00
 View.Infra:0.00.00
     Field Field
     Mod Mod
-    Count Count
 View.View:0.00.00
     View View
     Grid Grid
     GridChild GridChild
+    Count Count
 Tool.Icon:0.00.00
     Icon Icon
     IconList IconList
