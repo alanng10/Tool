@@ -4,10 +4,13 @@ Tool.Tool:0.00.00
 [Import]
 System.Infra
     Bool Bool
+    Int Int
 System.List
     Array Array
 System.Thread
     ThreadThis This
+System.Entry
+    EntryEntry Entry
 View.Frame:0.00.00
     Frame Frame
 Tool.Icon:0.00.00
