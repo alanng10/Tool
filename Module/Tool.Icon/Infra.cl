@@ -5,13 +5,11 @@ class IconList : Any
         base.Init();
         this.DrawInfra : share DrawInfra;
         this.IconList : share IconList;
-        this.IconSizeList : share IconSizeList;
         return true;
     }
 
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate IconList IconList { get { return data; } set { data : value; } }
-    field precate IconSizeList IconSizeList { get { return data; } set { data : value; } }
 
     maide prusate Bool Load()
     {
