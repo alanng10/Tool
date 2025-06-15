@@ -20,6 +20,70 @@ public class Gen : SourceGen
         return true;
     }
 
+    public override long Execute()
+    {
+        long k;
+        k = base.Execute();
+
+        if (!(k == 0))
+        {
+            return k;
+        }
+
+        this.ExecuteInfra();
+
+        return 0;
+    }
+
+    protected virtual bool ExecuteInfra()
+    {
+        String infraLoadPath;
+        infraLoadPath = this.S("ToolData/Tool/InfraLoad.txt");
+
+        String infraLoadText;
+        infraLoadText = this.StorageTextRead(infraLoadPath);
+
+        this.AddClear();
+
+        Iter iter;
+        iter = this.ItemTable.IterCreate();
+        this.ItemTable.IterSet(iter);
+        while (iter.Next())
+        {
+            String index;
+            index = iter.Index as String;
+
+            Text k;
+            k = this.TextCreate(infraLoadText);
+            k = this.Place(k, "#Name#", index);
+
+            String ka;
+            ka = this.StringCreate(k);
+
+            this.Add(ka);
+        }
+
+        String kd;
+        kd = this.AddResult();
+
+        String infraPath;
+        infraPath = this.S("ToolData/Tool/Infra.cl");
+
+        String infraText;
+        infraText = this.StorageTextRead(infraPath);
+
+        Text kaa;
+        kaa = this.TextCreate(infraText);
+        kaa = this.Place(kaa, "#Load#", kd);
+
+        String a;
+        a = this.StringCreate(kaa);
+
+        this.StorageTextWrite(this.S("../../Module/Tool.Icon/Infra.cl"), a);
+
+        return true;
+    }
+
     protected override TableEntry GetItemEntry(String line)
     {
         Text kka;
