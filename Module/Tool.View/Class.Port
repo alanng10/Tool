@@ -15,6 +15,7 @@ System.Text
     StringData StringData
     StringComp StringComp
 View.Draw:0.00.00
+    Draw Draw
     DrawImage Image
     DrawAlignList AlignList
     DrawInfra Infra
