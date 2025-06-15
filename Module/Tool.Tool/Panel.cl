@@ -2,6 +2,7 @@ class Panel : ToolPanel
 {
     maide prusate Bool Init()
     {
+        base.Init();
         this.ListInfra : share ListInfra;
         this.IconList : share IconList;
 
@@ -23,7 +24,8 @@ class Panel : ToolPanel
         this.AddCommand(this.IconList.Back);
         this.AddCommand(this.IconList.Front);
 
-        base.Init();
+        this.Set();
+
         return true;
     }
 

@@ -45,14 +45,18 @@ class Tool : Any
         table.Init();
         table.Part : array;
         table.Index : 0;
-        table.Pos.Col : 100;
-        table.Pos.Row : 100;
+        table.Pos.Col : 0;
+        table.Pos.Row : 0;
         table.Size.Wed : 500;
         table.Size.Het : 300;
 
         var Grid grid;
         grid : new Grid;
         grid.Init();
+        grid.Pos.Col : 100;
+        grid.Pos.Row : 50;
+        grid.Size.Wed : 1000;
+        grid.Size.Het : 600;
 
         var Count colA;
         colA : new Count;
@@ -75,6 +79,7 @@ class Tool : Any
 
         var Panel panel;
         panel : new Panel;
+        panel.Palete : this.ViewInfra.PaleteDefault;
         panel.Init();
         panel.Pos.Col : 0;
         panel.Pos.Row : 0;

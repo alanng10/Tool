@@ -1,9 +1,9 @@
 class Panel : Grid
 {
-    maide prusate Bool Init()
-    {
-        base.Init();
+    field prusate Array Command { get { return data; } set { data : value; } }
 
+    maide prusate Bool Set()
+    {
         var Int count;
         count : this.Command.Count;
 
@@ -12,11 +12,6 @@ class Panel : Grid
 
         var Int het;
         het : 16 + 4;
-
-        var Count col;
-        col : new Count;
-        col.Init();
-        col.Value : wed;
 
         var Count row;
         row : new Count;
@@ -27,6 +22,11 @@ class Panel : Grid
         i : 0;
         while (i < count)
         {
+            var Count col;
+            col : new Count;
+            col.Init();
+            col.Value : wed;
+
             this.Col.Add(col);
 
             i : i + 1;
@@ -63,6 +63,4 @@ class Panel : Grid
 
         return true;
     }
-
-    field prusate Array Command { get { return data; } set { data : value; } }
 }
