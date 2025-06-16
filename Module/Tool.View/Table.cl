@@ -79,7 +79,7 @@ class Table : View
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
         var DrawImage image;
-        image : this.ToolViewInfra.ImagePartTable;
+        image : this.ToolViewInfra.ImageTableHeadLite;
 
         this.DrawRectA.Pos.Col : this.Pos.Col;
         this.DrawRectA.Pos.Row : this.Pos.Row;
@@ -95,6 +95,24 @@ class Table : View
 
         var Part part;
         part : cast Part(this.Part.Get(this.Index));
+
+        var Int nameCount;
+        nameCount : this.StringComp.Count(part.Name);
+
+        var Int midWed;
+        midWed : 4 + 16 + 5 + nameCount * 8;
+        midWed : midWed - image.Size.Wed;
+
+        draw.Fill : this.ToolViewInfra.BrushTableHeadMid;
+
+        this.DrawRectA.Pos.Col : this.Pos.Col + image.SizeWed;
+        this.DrawRectA.Pos.Row : this.Pos.Row;
+        this.DrawRectA.Size.Wed : midWed;
+        this.DrawRectA.Size.Het : this.ToolViewInfra.ImageTableHeadMid.Size.Het;
+
+        draw.ExecuteRect(this.DrawRectA);
+
+        draw.Fill : null;
 
         this.DrawRectA.Pos.Col : this.Pos.Col + 4;
         this.DrawRectA.Pos.Row : this.Pos.Row + 4;
