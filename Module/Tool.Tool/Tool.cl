@@ -10,6 +10,7 @@ class Tool : Any
 
     field prusate Frame Frame { get { return data; } set { data : value; } }
     field prusate ThreadThis ThreadThis { get { return data; } set { data : value; } }
+    field prusate Table Table { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
     field precate ViewInfra ViewInfra { get { return data; } set { data : value; } }
 
@@ -59,16 +60,15 @@ class Tool : Any
         array.Set(3, findPart);
         array.Set(4, terminaPart);
 
-        var Table table;
-        table : new Table;
-        table.Palete : this.ViewInfra.PaleteDefault;
-        table.Init();
-        table.Part : array;
-        table.Index : 0;
-        table.Pos.Col : 0;
-        table.Pos.Row : 0;
-        table.Size.Wed : 1000;
-        table.Size.Het : 300;
+        this.Table : new Table;
+        this.Table.Palete : this.ViewInfra.PaleteDefault;
+        this.Table.Init();
+        this.Table.Part : array;
+        this.Table.Index : 0;
+        this.Table.Pos.Col : 0;
+        this.Table.Pos.Row : 0;
+        this.Table.Size.Wed : 1000;
+        this.Table.Size.Het : 300;
 
         var Grid grid;
         grid : new Grid;
@@ -120,7 +120,7 @@ class Tool : Any
         childB.Rect.Pos.Row : 1;
         childB.Rect.Size.Wed : 1;
         childB.Rect.Size.Het : 1;
-        childB.View : table;
+        childB.View : this.Table;
 
         grid.ChildList.Add(childA);
         grid.ChildList.Add(childB);

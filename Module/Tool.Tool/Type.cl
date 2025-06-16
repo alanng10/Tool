@@ -19,6 +19,36 @@ class Type : TypeType
 
             this.Tool.ThreadThis.Thread.Exit(0);
         }
+
+        var Int kk;
+        inf (a = d.Digit1 & o)
+        {
+            kk : 0;
+        }
+        inf (a = d.Digit2 & o)
+        {
+            kk : 1;
+        }
+        inf (a = d.Digit3 & o)
+        {
+            kk : 2;
+        }
+        inf (a = d.Digit4 & o)
+        {
+            kk : 3;
+        }
+        inf (a = d.Digit5 & o)
+        {
+            kk : 4;
+        }
+
+        inf (~(kk = null))
+        {
+            this.Tool.Table.Index : kk;
+
+            this.Tool.Frame.Update(this.Tool.Table.Area);
+        }
+
         return true;
     }
 }
