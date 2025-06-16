@@ -78,8 +78,8 @@ class Table : View
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
-        var Int iconPosSpace;
-        iconPosSpace : 4;
+        var Int iconPos;
+        iconPos : 4;
 
         var DrawImage image;
 
@@ -96,6 +96,8 @@ class Table : View
         {
             part : cast Part(this.Part.Get(i));
 
+            nameCount : this.StringComp.Count(part.Name);
+
             var Bool b;
             b : i = 0;
             inf (b)
@@ -106,24 +108,12 @@ class Table : View
             {
                 image : this.ToolViewInfra.ImageTableHeadBeforeLite2;
             }
-            
-            this.DrawRectA.Pos.Col : this.Pos.Col + col;
-            this.DrawRectA.Pos.Row : this.Pos.Row;
-            this.DrawRectA.Size.Wed : image.Size.Wed;
-            this.DrawRectA.Size.Het : image.Size.Het;
 
-            this.DrawRectB.Pos.Col : 0;
-            this.DrawRectB.Pos.Row : 0;
-            this.DrawRectB.Size.Wed : image.Size.Wed;
-            this.DrawRectB.Size.Het : image.Size.Het;
+            this.ExechteDrawHeadImage(image, col, 0);
 
-            draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
+            this.ExecuteDrawHeadMid(this.ToolViewInfra.BrushTableHeadBeforeMid, nameCount, col, iconPos, image.Size.Wed, 12);
 
-            nameCount : this.StringComp.Count(part.Name);
-
-            this.ExecuteDrawHeadMid(this.ToolViewInfra.BrushTableHeadBeforeMid, nameCount, col, iconPosSpace, image.Size.Wed, 12);
-
-            this.ExecuteDrawHeadIcon(part, col);
+            this.ExecuteDrawHeadIcon(part, col, iconPos, iconPos);
 
             col : col + kaa;
 
