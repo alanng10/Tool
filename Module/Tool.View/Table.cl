@@ -111,7 +111,7 @@ class Table : View
 
         draw.Fill : this.ToolViewInfra.BrushTableHeadMid;
 
-        this.DrawRectA.Pos.Col : this.Pos.Col + image.SizeWed;
+        this.DrawRectA.Pos.Col : this.Pos.Col + image.Size.Wed;
         this.DrawRectA.Pos.Row : this.Pos.Row;
         this.DrawRectA.Size.Wed : midWed;
         this.DrawRectA.Size.Het : this.ToolViewInfra.ImageTableHeadMid.Size.Het;
