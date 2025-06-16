@@ -35,6 +35,14 @@ Tool.View:0.00.00
     ToolViewInfra Infra
 Tool.Package:0.00.00
     PackagePart Part
+Tool.Problem:0.00.00
+    ProblemPart Part
+Tool.Docue:0.00.00
+    DocuePart Part
+Tool.Find:0.00.00
+    FindPart Part
+Tool.Termina:0.00.00
+    TerminaPart Part
 
 [Export]
 Tool
