@@ -4,13 +4,16 @@ class Infra : Any
     {
         base.Init();
         this.DrawInfra : share DrawInfra;
+        this.DrawBrushKindList : share DrawBrushKindList;
         return true;
     }
 
     field prusate DrawImage ImageTableHeadLite { get { return data; } set { data : value; } }
     field prusate DrawImage ImageTableHeadRite { get { return data; } set { data : value; } }
     field prusate DrawImage ImageTableHeadMid { get { return data; } set { data : value; } }
+    field prusate DrawBrush BrushTableHeadMid { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
+    field precate DrawBrushKindList DrawBrushKindList { get { return data; } set { data : value; } }
 
     maide prusate Bool Load()
     {
@@ -29,6 +32,11 @@ class Infra : Any
         {
             return false;
         }
+
+        this.BrushTableHeadMid : new DrawBrush;
+        this.BrushTableHeadMid.Kind : this.DrawBrushKindList.Image;
+        this.BrushTableHeadMid.Image : this.imageTableHeadMid;
+        this.BrushTableHeadMid.Init();
 
         return true;
     }
