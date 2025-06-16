@@ -85,7 +85,7 @@ class Table : View
 
     maide precate Bool ExecuteDrawBord(var Draw draw)
     {
-        this.DrawRectA.Pos.Col : this.Pos.Col;
+        this.DrawRectA.Pos.Col : this.Pos.Col + 1;
         this.DrawRectA.Pos.Row : this.Pos.Row + this.ToolViewInfra.ImageTableHeadLite.Size.Het;
         this.DrawRectA.Size.Wed : 1200;
         this.DrawRectA.Size.Het : 2;
