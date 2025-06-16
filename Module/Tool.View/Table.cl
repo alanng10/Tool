@@ -122,9 +122,23 @@ class Table : View
             kaa : iconPosSpace + part.Icon.Size.Count + 5 + nameCount * 8;
 
             var Int midWedA;
-            midWedA : ka;
+            midWedA : kaa;
             midWedA : midWedA - image.Size.Wed;
 
+            draw.Fill : this.ToolViewInfra.BrushTableHeadBeforeMid;
+
+            draw.FillPos.Col : this.MathInt(this.Pos.Col);
+            draw.FillPos.Row : this.MathInt(this.Pos.Row);
+            draw.FillPosSet();
+
+            this.DrawRectA.Pos.Col : this.Pos.Col + image.Size.Wed;
+            this.DrawRectA.Pos.Row : this.Pos.Row;
+            this.DrawRectA.Size.Wed : midWedA;
+            this.DrawRectA.Size.Het : this.ToolViewInfra.ImageTableHeadBeforeMid.Size.Het;
+
+            draw.ExecuteRect(this.DrawRectA);
+
+            draw.Fill : null;
 
             i : i + 1;
         }
