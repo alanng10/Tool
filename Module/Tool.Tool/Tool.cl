@@ -34,10 +34,30 @@ class Tool : Any
         packagePart : new PackagePart;
         packagePart.Init();
 
+        var ProblemPart problemPart;
+        problemPart : new ProblemPart;
+        problemPart.Init();
+
+        var DocuePart docuePart;
+        docuePart : new DocuePart;
+        docuePart.Init();
+
+        var FindPart findPart;
+        findPart : new FindPart;
+        findPart.Init();
+
+        var TerminaPart terminaPart;
+        terminaPart : new TerminaPart;
+        terminaPart.Init();
+
         var Array array;
-        array : this.ListInfra.ArrayCreate(1);
+        array : this.ListInfra.ArrayCreate(5);
 
         array.Set(0, packagePart);
+        array.Set(1, problemPart);
+        array.Set(2, docuePart);
+        array.Set(3, findPart);
+        array.Set(4, terminaPart);
 
         var Table table;
         table : new Table;
