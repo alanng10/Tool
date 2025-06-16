@@ -119,7 +119,7 @@ class Table : View
 
             this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
-            this.ExecuteDrawHeadName(draw, part, col, iconPos);
+            this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col, iconPos);
 
             col : col + headWed + 12;
 
@@ -149,7 +149,7 @@ class Table : View
 
         this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
-        this.ExecuteDrawHeadName(draw, part, col, iconPos);
+        this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashWhite, col, iconPos);
 
         col : col + headWed + this.ToolViewInfra.ImageTableHeadRite.Size.Wed;
 
@@ -176,7 +176,7 @@ class Table : View
 
             this.ExecuteDrawHeadIcon(draw, part, col - kaa, iconPos, iconPos);
 
-            this.ExecuteDrawHeadName(draw, part, col - kaa, iconPos);
+            this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col - kaa, iconPos);
 
             col : col + headWed + 12 + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Wed - kaa;
 
@@ -220,7 +220,7 @@ class Table : View
         return true;
     }
 
-    maide precate Bool ExecuteDrawHeadName(var Draw draw, var Part part, var Int col, var Int iconCol)
+    maide precate Bool ExecuteDrawHeadName(var Draw draw, var Part part, var DrawSlash slash, var Int col, var Int iconCol)
     {
         this.StringData.ValueString : part.Name;
 
@@ -235,7 +235,7 @@ class Table : View
 
         draw.Font : this.Palete.FontMono;
 
-        draw.Line : this.DrawInfra.SlashWhite;
+        draw.Line : slash;
 
         draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, this.DrawRectA, null);
 
