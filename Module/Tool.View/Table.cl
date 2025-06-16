@@ -220,19 +220,25 @@ class Table : View
         return true;
     }
 
-    maide precate Bool ExecuteDrawHeadIcon(var Part part, var Int col)
+    maide precate Bool ExecuteDrawHeadIcon(var Part part, var Int col, var Int iconCol, var Int iconRow)
     {
-        this.DrawRectA.Pos.Col : this.Pos.Col + col + iconPosSpace;
-        this.DrawRectA.Pos.Row : this.Pos.Row + iconPosSpace;
-        this.DrawRectA.Size.Wed : part.Icon.Size.Count;
-        this.DrawRectA.Size.Het : part.Icon.Size.Count;
+        this.ExecuteDrawHeadImage(part.Icon.Image, col + iconCol, iconRow);
+        return true;
+    }
+
+    maide precate Bool ExecuteDrawHeadImage(var DrawImage image, var Int col, var Int row)
+    {
+        this.DrawRectA.Pos.Col : this.Pos.Col + col;
+        this.DrawRectA.Pos.Row : this.Pos.Row + row;
+        this.DrawRectA.Size.Wed : image.Size.Wed;
+        this.DrawRectA.Size.Het : image.Size.Het;
 
         this.DrawRectB.Pos.Col : 0;
         this.DrawRectB.Pos.Row : 0;
-        this.DrawRectB.Size.Wed : part.Icon.Size.Count;
-        this.DrawRectB.Size.Het : part.Icon.Size.Count;
+        this.DrawRectB.Size.Wed : image.Size.Wed;
+        this.DrawRectB.Size.Het : image.Size.Het;
 
-        draw.ExecuteImage(part.Icon.Image, this.DrawRectA, this.DrawRectB);
+        draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
         return true;
     }
 }
