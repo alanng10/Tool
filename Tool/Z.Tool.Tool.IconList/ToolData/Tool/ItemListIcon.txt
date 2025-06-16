@@ -1,4 +1,9 @@
 PackageList s
+Struct s
+Problem s
+Docue s
+Find s
+Termina s
 ToolNew s
 Save s
 SaveAll s
