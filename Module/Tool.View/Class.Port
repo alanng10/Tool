@@ -18,6 +18,8 @@ System.Text
 View.Draw:0.00.00
     Draw Draw
     DrawImage Image
+    DrawBrush Brush
+    DrawBrushKindList BrushKindList
     DrawAlignList AlignList
     DrawInfra Infra
 View.Infra:0.00.00
