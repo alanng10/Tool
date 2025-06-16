@@ -109,11 +109,13 @@ class Table : View
                 image : this.ToolViewInfra.ImageTableHeadBeforeLite2;
             }
 
-            this.ExecuteDrawHeadImage(image, col, 0);
+            this.ExecuteDrawHeadImage(draw, image, col, 0);
 
-            this.ExecuteDrawHeadMid(this.ToolViewInfra.BrushTableHeadBeforeMid, nameCount, col, iconPos, image.Size.Wed, 12);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, nameCount, col, iconPos, image.Size.Wed, 12);
 
-            this.ExecuteDrawHeadIcon(part, col, iconPos, iconPos);
+            this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
+
+            this.ExecuteDrawHeadName(draw, part, col, iconPos);
 
             col : col + kaa;
 
@@ -122,7 +124,7 @@ class Table : View
 
         inf (0 < i)
         {
-            this.ExecuteDrawHeadImage(this.ToolViewInfra.ImageTableHeadBeforeRite, col, 0);
+            this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadBeforeRite, col, 0);
 
             col : col + 1;
         }
@@ -163,35 +165,10 @@ class Table : View
 
         this.ExecuteDrawHeadIcon(part, 0);
 
-        this.StringData.ValueString : part.Name;
-
-        this.Text.Data : this.StringData;
-        this.Text.Range.Index : 0;
-        this.Text.Range.Count : this.StringComp.Count(part.Name);
-
-        this.DrawRectA.Pos.Col : this.Pos.Col + iconPosSpace + part.Icon.Size.Count + 5;
-        this.DrawRectA.Pos.Row : this.Pos.Row + 5;
-        this.DrawRectA.Size.Wed : 8 * this.Text.Range.Count;
-        this.DrawRectA.Size.Het : 15;
-
-        draw.Font : this.Palete.FontMono;
-
-        draw.Line : this.DrawInfra.SlashWhite;
-
-        draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, this.DrawRectA, null);
-
-        draw.Line : null;
-
-        draw.Font : null;
-
-        this.Text.Data : null;
-
-        this.StringData.ValueString : null;
-
         return true;
     }
 
-    maide precate Bool ExecuteDrawHeadMid(var DrawBrush brush, var Int nameCount, var Int col, var Int iconCol, var Int beforeWed, var Int afterWed)
+    maide precate Bool ExecuteDrawHeadMid(var Draw draw, var DrawBrush brush, var Int nameCount, var Int col, var Int iconCol, var Int beforeWed, var Int afterWed)
     {
         var Int ka;
         ka : iconCol + part.Icon.Size.Count + 5 + nameCount * 8 + afterWed;
@@ -217,13 +194,42 @@ class Table : View
         return true;
     }
 
-    maide precate Bool ExecuteDrawHeadIcon(var Part part, var Int col, var Int iconCol, var Int iconRow)
+    maide precate Bool ExecuteDrawHeadIcon(var Draw draw, var Part part, var Int col, var Int iconCol, var Int iconRow)
     {
-        this.ExecuteDrawHeadImage(part.Icon.Image, col + iconCol, iconRow);
+        this.ExecuteDrawHeadImage(draw, part.Icon.Image, col + iconCol, iconRow);
         return true;
     }
 
-    maide precate Bool ExecuteDrawHeadImage(var DrawImage image, var Int col, var Int row)
+    maide precate Bool ExecuteDrawHeadName(var Draw draw, var Part part, var Int col, var Int iconCol)
+    {
+        this.StringData.ValueString : part.Name;
+
+        this.Text.Data : this.StringData;
+        this.Text.Range.Index : 0;
+        this.Text.Range.Count : this.StringComp.Count(part.Name);
+
+        this.DrawRectA.Pos.Col : this.Pos.Col + col + iconCol + part.Icon.Size.Count + 5;
+        this.DrawRectA.Pos.Row : this.Pos.Row + 5;
+        this.DrawRectA.Size.Wed : 8 * this.Text.Range.Count;
+        this.DrawRectA.Size.Het : 15;
+
+        draw.Font : this.Palete.FontMono;
+
+        draw.Line : this.DrawInfra.SlashWhite;
+
+        draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, this.DrawRectA, null);
+
+        draw.Line : null;
+
+        draw.Font : null;
+
+        this.Text.Data : null;
+
+        this.StringData.ValueString : null;
+        return true;
+    }
+
+    maide precate Bool ExecuteDrawHeadImage(var Draw draw, var DrawImage image, var Int col, var Int row)
     {
         this.DrawRectA.Pos.Col : this.Pos.Col + col;
         this.DrawRectA.Pos.Row : this.Pos.Row + row;
