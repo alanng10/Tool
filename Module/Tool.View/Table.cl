@@ -149,7 +149,32 @@ class Table : View
 
         this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
+        this.ExecuteDrawHeadName(draw, part, col, iconPos);
+
         col : col + headWed + this.ToolViewInfra.ImageTableHeadRite.Size.Wed;
+
+        i : this.Index + 1;
+
+        while (i < this.Part.Count)
+        {
+            part : cast Part(this.Part.Get(i));
+
+            nameCount : this.StringComp.Count(part.Name);
+
+            headWed : this.HeadWed(part.Icon, nameCount, iconPos);
+
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWed + 12, 0);
+
+            this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadAfterRite, col + headWed + 12, 0);
+
+            this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
+
+            this.ExecuteDrawHeadName(draw, part, col, iconPos);
+
+            col : col + headWed + 12 + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Wed;
+
+            i : i + 1;
+        }
 
         return true;
     }
