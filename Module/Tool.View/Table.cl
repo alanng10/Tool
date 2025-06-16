@@ -109,7 +109,7 @@ class Table : View
                 image : this.ToolViewInfra.ImageTableHeadBeforeLite2;
             }
 
-            this.ExechteDrawHeadImage(image, col, 0);
+            this.ExecuteDrawHeadImage(image, col, 0);
 
             this.ExecuteDrawHeadMid(this.ToolViewInfra.BrushTableHeadBeforeMid, nameCount, col, iconPos, image.Size.Wed, 12);
 
@@ -118,6 +118,13 @@ class Table : View
             col : col + kaa;
 
             i : i + 1;
+        }
+
+        inf (0 < i)
+        {
+            this.ExecuteDrawHeadImage(this.ToolViewInfra.ImageTableHeadBeforeRite, col, 0);
+
+            col : col + 1;
         }
 
         image : this.ToolViewInfra.ImageTableHeadLite;
