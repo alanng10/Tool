@@ -78,11 +78,58 @@ class Table : View
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
-        var DrawImage image;
-        image : this.ToolViewInfra.ImageTableHeadLite;
-
         var Int iconPosSpace;
         iconPosSpace : 4;
+
+        var DrawImage image;
+
+        var Part part;
+
+        var Int nameCount;
+
+        var Int i;
+        i : 0;
+        while (i < this.Index)
+        {
+            part : cast Part(this.Part.Get(i));
+
+            var Bool b;
+            b : i = 0;
+            inf (b)
+            {
+                image : this.ToolViewInfra.ImageTableHeadBeforeLite;
+            }
+            inf (~b)
+            {
+                image : this.ToolViewInfra.ImageTableHeadBeforeLite2;
+            }
+            
+            this.DrawRectA.Pos.Col : this.Pos.Col;
+            this.DrawRectA.Pos.Row : this.Pos.Row;
+            this.DrawRectA.Size.Wed : image.Size.Wed;
+            this.DrawRectA.Size.Het : image.Size.Het;
+
+            this.DrawRectB.Pos.Col : 0;
+            this.DrawRectB.Pos.Row : 0;
+            this.DrawRectB.Size.Wed : image.Size.Wed;
+            this.DrawRectB.Size.Het : image.Size.Het;
+
+            draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
+
+            nameCount : this.StringComp.Count(part.Name);
+
+            var Int kaa;
+            kaa : iconPosSpace + part.Icon.Size.Count + 5 + nameCount * 8;
+
+            var Int midWedA;
+            midWedA : ka;
+            midWedA : midWedA - image.Size.Wed;
+
+
+            i : i + 1;
+        }
+
+        image : this.ToolViewInfra.ImageTableHeadLite;
 
         this.DrawRectA.Pos.Col : this.Pos.Col;
         this.DrawRectA.Pos.Row : this.Pos.Row;
@@ -96,10 +143,8 @@ class Table : View
 
         draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
 
-        var Part part;
         part : cast Part(this.Part.Get(this.Index));
 
-        var Int nameCount;
         nameCount : this.StringComp.Count(part.Name);
 
         var Int ka;
