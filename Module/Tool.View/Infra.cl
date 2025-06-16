@@ -35,7 +35,7 @@ class Infra : Any
 
         this.BrushTableHeadMid : new DrawBrush;
         this.BrushTableHeadMid.Kind : this.DrawBrushKindList.Image;
-        this.BrushTableHeadMid.Image : this.imageTableHeadMid;
+        this.BrushTableHeadMid.Image : this.ImageTableHeadMid;
         this.BrushTableHeadMid.Init();
 
         return true;
