@@ -1,4 +1,4 @@
-PackageList s
+Package s
 Struct s
 Problem s
 Docue s
