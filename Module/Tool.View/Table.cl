@@ -204,17 +204,7 @@ class Table : View
 
         draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
 
-        this.DrawRectA.Pos.Col : this.Pos.Col + iconPosSpace;
-        this.DrawRectA.Pos.Row : this.Pos.Row + iconPosSpace;
-        this.DrawRectA.Size.Wed : part.Icon.Size.Count;
-        this.DrawRectA.Size.Het : part.Icon.Size.Count;
-
-        this.DrawRectB.Pos.Col : 0;
-        this.DrawRectB.Pos.Row : 0;
-        this.DrawRectB.Size.Wed : part.Icon.Size.Count;
-        this.DrawRectB.Size.Het : part.Icon.Size.Count;
-
-        draw.ExecuteImage(part.Icon.Image, this.DrawRectA, this.DrawRectB);
+        this.ExecuteDrawHeadIcon(part, 0);
 
         this.StringData.ValueString : part.Name;
 
