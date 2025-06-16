@@ -7,13 +7,25 @@ class Infra : Any
         return true;
     }
 
-    field prusate DrawImage ImagePartTable { get { return data; } set { data : value; } }
+    field prusate DrawImage ImageTableHeadLite { get { return data; } set { data : value; } }
+    field prusate DrawImage ImageTableHeadRite { get { return data; } set { data : value; } }
+    field prusate DrawImage ImageTableHeadMid { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
 
     maide prusate Bool Load()
     {
-        this.ImagePartTable : this.DrawInfra.ImageCreateStorage("Tool.View-0.00.00.data/Data/PartTable.png");
-        inf (this.ImagePartTable = null)
+        this.ImageTableHeadLite : this.DrawInfra.ImageCreateStorage("Tool.View-0.00.00.data/Data/TableHeadLite.png");
+        inf (this.ImageTableHeadLite = null)
+        {
+            return false;
+        }
+        this.ImageTableHeadRite : this.DrawInfra.ImageCreateStorage("Tool.View-0.00.00.data/Data/TableHeadRite.png");
+        inf (this.ImageTableHeadRite = null)
+        {
+            return false;
+        }
+        this.ImageTableHeadMid : this.DrawInfra.ImageCreateStorage("Tool.View-0.00.00.data/Data/TableHeadMid.png");
+        inf (this.ImageTableHeadMid = null)
         {
             return false;
         }
