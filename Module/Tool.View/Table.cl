@@ -148,27 +148,7 @@ class Table : View
 
         nameCount : this.StringComp.Count(part.Name);
 
-        var Int ka;
-        ka : iconPosSpace + part.Icon.Size.Count + 5 + nameCount * 8;
-
-        var Int midWed;
-        midWed : ka;
-        midWed : midWed - image.Size.Wed;
-
-        draw.Fill : this.ToolViewInfra.BrushTableHeadMid;
-
-        draw.FillPos.Col : this.MathInt(this.Pos.Col);
-        draw.FillPos.Row : this.MathInt(this.Pos.Row);
-        draw.FillPosSet();
-
-        this.DrawRectA.Pos.Col : this.Pos.Col + image.Size.Wed;
-        this.DrawRectA.Pos.Row : this.Pos.Row;
-        this.DrawRectA.Size.Wed : midWed;
-        this.DrawRectA.Size.Het : this.ToolViewInfra.ImageTableHeadMid.Size.Het;
-
-        draw.ExecuteRect(this.DrawRectA);
-
-        draw.Fill : null;
+        this.ExecuteDrawHeadMid(this.ToolViewInfra.BrushTableHeadMid, nameCount, col, iconPosSpace, image.Size.Wed, 0);
 
         image : this.ToolViewInfra.ImageTableHeadRite;
 
