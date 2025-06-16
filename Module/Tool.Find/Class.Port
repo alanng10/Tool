@@ -1,0 +1,15 @@
+[Module]
+Tool.Find:0.00.00
+
+[Import]
+System.Infra
+    Bool Bool
+Tool.View:0.00.00
+    ToolPart Part
+
+[Export]
+Part
+
+[Storage]
+
+[Entry]
