@@ -111,7 +111,10 @@ class Table : View
 
             this.ExecuteDrawHeadImage(draw, image, col, 0);
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, nameCount, col, iconPos, image.Size.Wed, 12);
+            var Int ka;
+            ka : iconPos + part.Icon.Size.Count + 5 + nameCount * 8 + 12;
+
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, ka, image.Size.Wed);
 
             this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
@@ -129,52 +132,29 @@ class Table : View
             col : col + this.ToolViewInfra.ImageTableHeadBeforeRite.Size.Wed;
         }
 
-        image : this.ToolViewInfra.ImageTableHeadLite;
-
-        this.DrawRectA.Pos.Col : this.Pos.Col;
-        this.DrawRectA.Pos.Row : this.Pos.Row;
-        this.DrawRectA.Size.Wed : image.Size.Wed;
-        this.DrawRectA.Size.Het : image.Size.Het;
-
-        this.DrawRectB.Pos.Col : 0;
-        this.DrawRectB.Pos.Row : 0;
-        this.DrawRectB.Size.Wed : image.Size.Wed;
-        this.DrawRectB.Size.Het : image.Size.Het;
-
-        draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
-
         part : cast Part(this.Part.Get(this.Index));
 
         nameCount : this.StringComp.Count(part.Name);
 
-        this.ExecuteDrawHeadMid(this.ToolViewInfra.BrushTableHeadMid, nameCount, col, iconPosSpace, image.Size.Wed, 0);
+        image : this.ToolViewInfra.ImageTableHeadLite;
+
+        this.ExecuteDrawHeadImage(draw, image, col, 0);
+
+        this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadMid, nameCount, col, iconPos, image.Size.Wed, 0);
 
         image : this.ToolViewInfra.ImageTableHeadRite;
 
-        this.DrawRectA.Pos.Col : this.Pos.Col + ka;
-        this.DrawRectA.Pos.Row : this.Pos.Row;
-        this.DrawRectA.Size.Wed : image.Size.Wed;
-        this.DrawRectA.Size.Het : image.Size.Het;
-
-        this.DrawRectB.Pos.Col : 0;
-        this.DrawRectB.Pos.Row : 0;
-        this.DrawRectB.Size.Wed : image.Size.Wed;
-        this.DrawRectB.Size.Het : image.Size.Het;
-
-        draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
+        this.ExecuteDrawHeadImage(draw, image, col, 0);
 
         this.ExecuteDrawHeadIcon(part, 0);
 
         return true;
     }
 
-    maide precate Bool ExecuteDrawHeadMid(var Draw draw, var DrawBrush brush, var Int nameCount, var Int col, var Int iconCol, var Int beforeWed, var Int afterWed)
+    maide precate Bool ExecuteDrawHeadMid(var Draw draw, var DrawBrush brush, var Int col, var Int wed, var Int beforeWed)
     {
-        var Int ka;
-        ka : iconCol + part.Icon.Size.Count + 5 + nameCount * 8 + afterWed;
-
         var Int midWed;
-        midWed : ka;
+        midWed : wed;
         midWed : midWed - beforeWed;
 
         draw.Fill : brush;
