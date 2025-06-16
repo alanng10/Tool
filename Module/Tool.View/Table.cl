@@ -111,8 +111,8 @@ class Table : View
 
         draw.Fill : this.ToolViewInfra.BrushTableHeadMid;
 
-        draw.FillPos.Col : this.MathInt(0);
-        draw.FillPos.Row : this.MathInt(0);
+        draw.FillPos.Col : this.MathInt(this.Pos.Col);
+        draw.FillPos.Row : this.MathInt(this.Pos.Row);
         draw.FillPosSet();
 
         this.DrawRectA.Pos.Col : this.Pos.Col + image.Size.Wed;
