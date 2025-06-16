@@ -67,7 +67,7 @@ class Tool : Any
         table.Index : 0;
         table.Pos.Col : 0;
         table.Pos.Row : 0;
-        table.Size.Wed : 500;
+        table.Size.Wed : 1000;
         table.Size.Het : 300;
 
         var Grid grid;
@@ -81,7 +81,7 @@ class Tool : Any
         var Count colA;
         colA : new Count;
         colA.Init();
-        colA.Value: 400;
+        colA.Value: 1000;
 
         var Count rowA;
         rowA : new Count;
