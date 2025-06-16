@@ -87,6 +87,8 @@ class Table : View
 
         var Int nameCount;
 
+        var Int headWed;
+
         var Int col;
         col : 0;
 
@@ -111,16 +113,15 @@ class Table : View
 
             this.ExecuteDrawHeadImage(draw, image, col, 0);
 
-            var Int ka;
-            ka : iconPos + part.Icon.Size.Count + 5 + nameCount * 8 + 12;
+            headWed : this.HeadWed(part.Icon, nameCount, iconPos);
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, ka, image.Size.Wed);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWed + 12, image.Size.Wed);
 
             this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
             this.ExecuteDrawHeadName(draw, part, col, iconPos);
 
-            col : col + kaa;
+            col : col + headWed + 12;
 
             i : i + 1;
         }
@@ -140,15 +141,22 @@ class Table : View
 
         this.ExecuteDrawHeadImage(draw, image, col, 0);
 
-        this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadMid, nameCount, col, iconPos, image.Size.Wed, 0);
+        headWed : this.HeadWed(part.Icon, nameCount, iconPos);
 
-        image : this.ToolViewInfra.ImageTableHeadRite;
+        this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadMid, col, headWed, image.Size.Wed);
 
-        this.ExecuteDrawHeadImage(draw, image, col, 0);
+        this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadRite, col + headWed, 0);
 
-        this.ExecuteDrawHeadIcon(part, 0);
+        this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
+
+        col : col + headWed + this.ToolViewInfra.ImageTableHeadRite.Size.Wed;
 
         return true;
+    }
+
+    maide precate Int HeadWed(var Icon icon, var Int nameCount, var Int iconCol)
+    {
+        return iconCol + icon.Size.Count + 5 + nameCount * 8;
     }
 
     maide precate Bool ExecuteDrawHeadMid(var Draw draw, var DrawBrush brush, var Int col, var Int wed, var Int beforeWed)
