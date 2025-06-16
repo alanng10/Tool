@@ -120,7 +120,6 @@ class Table : View
 
         draw.Fill : null;
 
-        var DrawImage image;
         image : this.ToolViewInfra.ImageTableHeadRite;
 
         this.DrawRectA.Pos.Col : this.Pos.Col + ka;
