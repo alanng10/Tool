@@ -58,8 +58,33 @@ class Infra : Any
 
     maide precate Bool LoadIcon(var DrawImageRead imageRead)
     {
-        this.IconList.PackageList.Image : this.ImageRead(imageRead);
-        inf (this.IconList.PackageList.Image = null)
+        this.IconList.Package.Image : this.ImageRead(imageRead);
+        inf (this.IconList.Package.Image = null)
+        {
+            return false;
+        }
+        this.IconList.Struct.Image : this.ImageRead(imageRead);
+        inf (this.IconList.Struct.Image = null)
+        {
+            return false;
+        }
+        this.IconList.Problem.Image : this.ImageRead(imageRead);
+        inf (this.IconList.Problem.Image = null)
+        {
+            return false;
+        }
+        this.IconList.Docue.Image : this.ImageRead(imageRead);
+        inf (this.IconList.Docue.Image = null)
+        {
+            return false;
+        }
+        this.IconList.Find.Image : this.ImageRead(imageRead);
+        inf (this.IconList.Find.Image = null)
+        {
+            return false;
+        }
+        this.IconList.Termina.Image : this.ImageRead(imageRead);
+        inf (this.IconList.Termina.Image = null)
         {
             return false;
         }
@@ -105,11 +130,6 @@ class Infra : Any
         }
         this.IconList.OpenClass.Image : this.ImageRead(imageRead);
         inf (this.IconList.OpenClass.Image = null)
-        {
-            return false;
-        }
-        this.IconList.Find.Image : this.ImageRead(imageRead);
-        inf (this.IconList.Find.Image = null)
         {
             return false;
         }

@@ -8,7 +8,12 @@ class IconList : Any
         this.Count : this.Array.Count;
         this.Index : 0;
 
-        this.PackageList : this.AddItem(this.IconSizeList.Small);
+        this.Package : this.AddItem(this.IconSizeList.Small);
+        this.Struct : this.AddItem(this.IconSizeList.Small);
+        this.Problem : this.AddItem(this.IconSizeList.Small);
+        this.Docue : this.AddItem(this.IconSizeList.Small);
+        this.Find : this.AddItem(this.IconSizeList.Small);
+        this.Termina : this.AddItem(this.IconSizeList.Small);
         this.ToolNew : this.AddItem(this.IconSizeList.Small);
         this.Save : this.AddItem(this.IconSizeList.Small);
         this.SaveAll : this.AddItem(this.IconSizeList.Small);
@@ -18,7 +23,6 @@ class IconList : Any
         this.PackageNew : this.AddItem(this.IconSizeList.Small);
         this.ClassNew : this.AddItem(this.IconSizeList.Small);
         this.OpenClass : this.AddItem(this.IconSizeList.Small);
-        this.Find : this.AddItem(this.IconSizeList.Small);
         this.LabelNext : this.AddItem(this.IconSizeList.Small);
         this.LabelPrev : this.AddItem(this.IconSizeList.Small);
         this.Prev : this.AddItem(this.IconSizeList.Small);
@@ -26,7 +30,12 @@ class IconList : Any
         return true;
     }
 
-    field prusate Icon PackageList { get { return data; } set { data : value; } }
+    field prusate Icon Package { get { return data; } set { data : value; } }
+    field prusate Icon Struct { get { return data; } set { data : value; } }
+    field prusate Icon Problem { get { return data; } set { data : value; } }
+    field prusate Icon Docue { get { return data; } set { data : value; } }
+    field prusate Icon Find { get { return data; } set { data : value; } }
+    field prusate Icon Termina { get { return data; } set { data : value; } }
     field prusate Icon ToolNew { get { return data; } set { data : value; } }
     field prusate Icon Save { get { return data; } set { data : value; } }
     field prusate Icon SaveAll { get { return data; } set { data : value; } }
@@ -36,7 +45,6 @@ class IconList : Any
     field prusate Icon PackageNew { get { return data; } set { data : value; } }
     field prusate Icon ClassNew { get { return data; } set { data : value; } }
     field prusate Icon OpenClass { get { return data; } set { data : value; } }
-    field prusate Icon Find { get { return data; } set { data : value; } }
     field prusate Icon LabelNext { get { return data; } set { data : value; } }
     field prusate Icon LabelPrev { get { return data; } set { data : value; } }
     field prusate Icon Prev { get { return data; } set { data : value; } }
@@ -64,7 +72,7 @@ class IconList : Any
 
     field precate Array Array { get { return data; } set { data : value; } }
 
-    field precate Int ArrayCount { get { return 15; } set { } }
+    field precate Int ArrayCount { get { return 19; } set { } }
 
     field prusate Int Count { get { return data; } set { data : value; } }
 
