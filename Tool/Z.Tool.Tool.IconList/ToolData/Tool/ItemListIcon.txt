@@ -13,7 +13,6 @@ Execute s
 PackageNew s
 ClassNew s
 OpenClass s
-Find s
 LabelNext s
 LabelPrev s
 Prev s
