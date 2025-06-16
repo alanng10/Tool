@@ -18,6 +18,7 @@ class Infra : Any
     field prusate DrawImage ImageTableHeadAfterRite { get { return data; } set { data : value; } }
     field prusate DrawBrush BrushTableHeadMid { get { return data; } set { data : value; } }
     field prusate DrawBrush BrushTableHeadBeforeMid { get { return data; } set { data : value; } }
+    field prusate DrawBrush BrushTableBord { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate DrawBrushKindList DrawBrushKindList { get { return data; } set { data : value; } }
 
@@ -73,6 +74,8 @@ class Infra : Any
         this.BrushTableHeadBeforeMid.Kind : this.DrawBrushKindList.Image;
         this.BrushTableHeadBeforeMid.Image : this.ImageTableHeadBeforeMid;
         this.BrushTableHeadBeforeMid.Init();
+
+        this.BrushTableBord : this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 0h36, 0h91, 0hfd));
 
         return true;
     }

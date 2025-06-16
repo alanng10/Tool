@@ -78,6 +78,28 @@ class Table : View
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
+        this.ExecuteDrawHead(draw);
+        this.ExecuteDrawBord(draw);
+        return true;
+    }
+
+    maide precate Bool ExecuteDrawBord(var Draw draw)
+    {
+        this.DrawRectA.Pos.Col : this.Pos.Col;
+        this.DrawRectA.Pos.Row : this.Pos.Row + this.ToolViewInfra.ImageTableHeadLite.Size.Het;
+        this.DrawRectA.Size.Wed : 1200;
+        this.DrawRectA.Size.Het : 2;
+
+        draw.Fill : this.ToolViewInfra.BrushTableBord;
+
+        draw.ExecuteRect(this.DrawRectA);
+
+        draw.Fill : null;
+        return true;
+    }
+
+    maide precate Bool ExecuteDrawHead(var Draw draw)
+    {
         var Int iconPos;
         iconPos : 4;
 
