@@ -81,6 +81,9 @@ class Table : View
         var DrawImage image;
         image : this.ToolViewInfra.ImageTableHeadLite;
 
+        var Int iconPosSpace;
+        iconPosSpace : 4;
+
         this.DrawRectA.Pos.Col : this.Pos.Col;
         this.DrawRectA.Pos.Row : this.Pos.Row;
         this.DrawRectA.Size.Wed : image.Size.Wed;
@@ -99,8 +102,11 @@ class Table : View
         var Int nameCount;
         nameCount : this.StringComp.Count(part.Name);
 
+        var Int ka;
+        ka : iconPosSpace + part.Icon.Size.Count + 5 + nameCount * 8;
+
         var Int midWed;
-        midWed : 4 + 16 + 5 + nameCount * 8;
+        midWed : ka;
         midWed : midWed - image.Size.Wed;
 
         draw.Fill : this.ToolViewInfra.BrushTableHeadMid;
@@ -114,8 +120,23 @@ class Table : View
 
         draw.Fill : null;
 
-        this.DrawRectA.Pos.Col : this.Pos.Col + 4;
-        this.DrawRectA.Pos.Row : this.Pos.Row + 4;
+        var DrawImage image;
+        image : this.ToolViewInfra.ImageTableHeadRite;
+
+        this.DrawRectA.Pos.Col : this.Pos.Col + ka;
+        this.DrawRectA.Pos.Row : this.Pos.Row;
+        this.DrawRectA.Size.Wed : image.Size.Wed;
+        this.DrawRectA.Size.Het : image.Size.Het;
+
+        this.DrawRectB.Pos.Col : 0;
+        this.DrawRectB.Pos.Row : 0;
+        this.DrawRectB.Size.Wed : image.Size.Wed;
+        this.DrawRectB.Size.Het : image.Size.Het;
+
+        draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
+
+        this.DrawRectA.Pos.Col : this.Pos.Col + iconPosSpace;
+        this.DrawRectA.Pos.Row : this.Pos.Row + iconPosSpace;
         this.DrawRectA.Size.Wed : part.Icon.Size.Count;
         this.DrawRectA.Size.Het : part.Icon.Size.Count;
 
@@ -132,16 +153,16 @@ class Table : View
         this.Text.Range.Index : 0;
         this.Text.Range.Count : this.StringComp.Count(part.Name);
 
-        this.DrawRectA.Pos.Col : this.Pos.Col + 25;
+        this.DrawRectA.Pos.Col : this.Pos.Col + iconPosSpace + part.Icon.Size.Count + 5;
         this.DrawRectA.Pos.Row : this.Pos.Row + 5;
-        this.DrawRectA.Size.Wed : 70;
+        this.DrawRectA.Size.Wed : 8 * this.Text.Range.Count;
         this.DrawRectA.Size.Het : 15;
 
         draw.Font : this.Palete.FontMono;
 
         draw.Line : this.DrawInfra.SlashWhite;
 
-        draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, this.DrawRectA);
+        draw.ExecuteText(this.Text, this.DrawAlignList.Start, this.DrawAlignList.Start, false, this.DrawRectA, null);
 
         draw.Line : null;
 
