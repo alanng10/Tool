@@ -87,8 +87,8 @@ class Table : View
 
         var Int nameCount;
 
-        var Int kk;
-        kk : 0;
+        var Int col;
+        col : 0;
 
         var Int i;
         i : 0;
@@ -107,7 +107,7 @@ class Table : View
                 image : this.ToolViewInfra.ImageTableHeadBeforeLite2;
             }
             
-            this.DrawRectA.Pos.Col : this.Pos.Col + kk;
+            this.DrawRectA.Pos.Col : this.Pos.Col + col;
             this.DrawRectA.Pos.Row : this.Pos.Row;
             this.DrawRectA.Size.Wed : image.Size.Wed;
             this.DrawRectA.Size.Het : image.Size.Het;
@@ -121,11 +121,11 @@ class Table : View
 
             nameCount : this.StringComp.Count(part.Name);
 
-            this.ExecuteDrawHeadMid(this.ToolViewInfra.BrushTableHeadBeforeMid, nameCount, iconPosSpace, image.Size.Wed, 12);
+            this.ExecuteDrawHeadMid(this.ToolViewInfra.BrushTableHeadBeforeMid, nameCount, col, iconPosSpace, image.Size.Wed, 12);
 
-            this.ExecuteDrawHeadIcon(part, kk);
+            this.ExecuteDrawHeadIcon(part, col);
 
-            kk : kk + kaa;
+            col : col + kaa;
 
             i : i + 1;
         }
@@ -214,7 +214,7 @@ class Table : View
         return true;
     }
 
-    maide precate Bool ExecuteDrawHeadMid(var DrawBrush brush, var Int nameCount, var Int iconCol, var Int beforeWed, var Int afterWed)
+    maide precate Bool ExecuteDrawHeadMid(var DrawBrush brush, var Int nameCount, var Int col, var Int iconCol, var Int beforeWed, var Int afterWed)
     {
         var Int ka;
         ka : iconCol + part.Icon.Size.Count + 5 + nameCount * 8 + afterWed;
@@ -229,7 +229,7 @@ class Table : View
         draw.FillPos.Row : this.MathInt(this.Pos.Row);
         draw.FillPosSet();
 
-        this.DrawRectA.Pos.Col : this.Pos.Col + kk + beforeWed;
+        this.DrawRectA.Pos.Col : this.Pos.Col + col + beforeWed;
         this.DrawRectA.Pos.Row : this.Pos.Row;
         this.DrawRectA.Size.Wed : midWed;
         this.DrawRectA.Size.Het : brush.Image.Size.Het;
