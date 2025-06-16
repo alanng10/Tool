@@ -126,7 +126,7 @@ class Table : View
         {
             this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadBeforeRite, col, 0);
 
-            col : col + 1;
+            col : col + this.ToolViewInfra.ImageTableHeadBeforeRite.Size.Wed;
         }
 
         image : this.ToolViewInfra.ImageTableHeadLite;
