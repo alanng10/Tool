@@ -8,16 +8,18 @@ Tool has edit part.
 
 Tool has package part.
 
-Tool has termina part.
-
 Tool has struct part.
 
-Tool has source part.
-
 Tool has class part.
+
+Tool has version part.
 
 Tool has docue part.
 
 Tool has shell part.
 
 Tool has find part.
+
+Tool has problem part.
+
+Tool has termina part.
