@@ -6,23 +6,26 @@ class Panel : ToolPanel
         this.ListInfra : share ListInfra;
         this.IconList : share IconList;
 
-        this.Command : this.ListInfra.ArrayCreate(14);
-        this.ArrayIndex : 0;
+        var List list;
+        list : new List;
+        list.Init();
 
-        this.AddCommand(this.IconList.ToolNew);
-        this.AddCommand(this.IconList.Save);
-        this.AddCommand(this.IconList.SaveAll);
-        this.AddCommand(this.IconList.Undo);
-        this.AddCommand(this.IconList.Redo);
-        this.AddCommand(this.IconList.Execute);
-        this.AddCommand(this.IconList.PackageNew);
-        this.AddCommand(this.IconList.ClassNew);
-        this.AddCommand(this.IconList.OpenClass);
-        this.AddCommand(this.IconList.Find);
-        this.AddCommand(this.IconList.LabelNext);
-        this.AddCommand(this.IconList.LabelPrev);
-        this.AddCommand(this.IconList.Prev);
-        this.AddCommand(this.IconList.Next);
+        list.Add(this.CreateCommand(this.IconList.ToolNew));
+        list.Add(this.CreateCommand(this.IconList.Save));
+        list.Add(this.CreateCommand(this.IconList.SaveAll));
+        list.Add(this.CreateCommand(this.IconList.Undo));
+        list.Add(this.CreateCommand(this.IconList.Redo));
+        list.Add(this.CreateCommand(this.IconList.Execute));
+        list.Add(this.CreateCommand(this.IconList.PackageNew));
+        list.Add(this.CreateCommand(this.IconList.ClassNew));
+        list.Add(this.CreateCommand(this.IconList.OpenClass));
+        list.Add(this.CreateCommand(this.IconList.Find));
+        list.Add(this.CreateCommand(this.IconList.LabelNext));
+        list.Add(this.CreateCommand(this.IconList.LabelPrev));
+        list.Add(this.CreateCommand(this.IconList.Prev));
+        list.Add(this.CreateCommand(this.IconList.Next));
+
+        this.Command : this.ListInfra.ArrayCreateList(list);
 
         this.Set();
 
@@ -31,17 +34,13 @@ class Panel : ToolPanel
 
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
     field precate IconList IconList { get { return data; } set { data : value; } }
-    field precate Int ArrayIndex { get { return data; } set { data : value; } }
 
-    maide precate Bool AddCommand(var Icon icon)
+    maide precate Command CreateCommand(var Icon icon)
     {
         var Command a;
         a : new Command;
         a.Icon : icon;
         a.Init();
-
-        this.Command.Set(this.ArrayIndex, a);
-        this.ArrayIndex : this.ArrayIndex + 1;
-        return true;
+        return a;
     }
 }
