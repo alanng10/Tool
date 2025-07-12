@@ -10,11 +10,11 @@ Tool has package part.
 
 Tool has struct part.
 
-Tool has class part.
+Tool has class part. 
 
 Tool has version part.
 
-Tool has docue part.
+Tool has docue part. 
 
 Tool has shell part.
 
