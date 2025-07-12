@@ -14,8 +14,6 @@ Tool has version part.
 
 Tool has docue part.
 
-Tool has shell part.
-
 Tool has find part.
 
 Tool has problem part.
