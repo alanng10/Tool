@@ -1,5 +1,5 @@
 # Class
 
-Tool has Class.
+Tool has Class. 
 
-Class has major.
+Class has major. 
