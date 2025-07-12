@@ -2,4 +2,4 @@
 
 Tool has Shell.
 
-Shell has major. 
+Shell has major.
