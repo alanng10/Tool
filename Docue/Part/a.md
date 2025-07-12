@@ -14,7 +14,7 @@ Tool has class part.
 
 Tool has version part.
 
-Tool has docue part.
+Tool has docue part. 
 
 Tool has shell part.
 
