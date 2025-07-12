@@ -10,7 +10,7 @@ Tool has package part.
 
 Tool has struct part.
 
-Tool has class part.
+Tool has class part. 
 
 Tool has version part.
 
