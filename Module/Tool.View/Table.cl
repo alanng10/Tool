@@ -60,6 +60,8 @@ class Table : View
     maide precate Bool ModIndex(var Mod mod)
     {
         this.Event(this.IndexField);
+
+        this.Child : cast Part(this.Part.Get(this.Index));
         return true;
     }
 
