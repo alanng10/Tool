@@ -51,14 +51,18 @@ class Tool : Any
         terminaPart : new TerminaPart;
         terminaPart.Init();
 
-        var Array array;
-        array : this.ListInfra.ArrayCreate(5);
+        var List list;
+        list : new List;
+        list.Init();
 
-        array.Set(0, packagePart);
-        array.Set(1, problemPart);
-        array.Set(2, docuePart);
-        array.Set(3, findPart);
-        array.Set(4, terminaPart);
+        list.Add(packagePart);
+        list.Add(problemPart);
+        list.Add(docuePart);
+        list.Add(findPart);
+        list.Add(terminaPart);
+
+        var Array array;
+        array : this.ListInfra.ArrayCreateList(list);
 
         this.Table : new Table;
         this.Table.Palete : this.ViewInfra.PaleteDefault;
