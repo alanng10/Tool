@@ -20,7 +20,7 @@ class Tool : Any
         {
             return false;
         }
-        
+
         inf (~share ToolViewInfra.Load())
         {
             return false;
