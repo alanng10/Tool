@@ -22,3 +22,5 @@ Make command does not use Console Program to trigg execute the make.
 
 Make command does not use Console Program to trigg Class compiler module list
 to make the module list.
+
+Tool does not use Console Program to trigg Class compiler module list.
