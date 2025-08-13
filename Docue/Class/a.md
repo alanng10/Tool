@@ -15,3 +15,5 @@ The command uses Class compiler module list module infra to make
 the module list.
 
 Make command has module infra to execute the module list make.
+
+Make command does not use Console Program to trigg execute the make.
