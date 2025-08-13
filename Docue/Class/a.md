@@ -17,3 +17,6 @@ the module list.
 Make command has module infra to execute the module list make.
 
 Make command does not use Console Program to trigg execute the make.
+
+Make command does not use Console Program to trigg Class compiler module list
+to make the module list.
