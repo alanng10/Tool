@@ -8,7 +8,7 @@ Class has MakeModule command for currently selected module in current package.
 
 Class has Make command for module list in current package.
 Make command makes module list from list of relative source fold path
-in file with ".Make" file extend in the package.
+in file with ".Make" file extend in the package root fold.
 
 The command makes the module list in the order of the path list.
 The command uses Class compiler module list module infra to make 
