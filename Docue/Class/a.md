@@ -13,6 +13,8 @@ in file with ".Make" file extend in the package.
 The command makes the module list in the order of the path list.
 The command uses Class compiler module list module infra to make 
 the module list.
+The command uses module Class.Console class Console maide Execute
+to make the module list.
 
 Make command has module infra to execute the module list make.
 
