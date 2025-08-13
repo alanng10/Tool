@@ -13,3 +13,5 @@ in Class.Make file in the package root fold.
 The command makes the module list in the order of the path list.
 The command uses Class compiler module list module infra to make 
 the module list.
+
+Make command has module infra to execute the module list make.
