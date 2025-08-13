@@ -1,3 +1,3 @@
 # Type
 
-Tool has Type. 
+Tool has Type.
