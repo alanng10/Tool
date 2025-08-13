@@ -6,9 +6,9 @@ Class has major.
 
 Class has MakeModule command for currently selected module in current package.
 
-Class has Make command for all modules in current package.
+Class has Make command for module list in current package.
 Make command makes module list from list of relative source fold path
-in Class.Make file in the package root fold.
+in file with ".Make" file extend in the package.
 
 The command makes the module list in the order of the path list.
 The command uses Class compiler module list module infra to make 
