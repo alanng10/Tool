@@ -17,3 +17,7 @@ After proto, the path has colon.
 Tool implone Task by network host.
 
 The host network port is local network.
+
+Program module list execute Task by pass the path.
+
+The pass is by network with the Tool network host.
