@@ -21,3 +21,5 @@ The host network port is local network.
 Program module list execute Task by pass the path.
 
 The pass is by network with the Tool network host.
+
+Tool execute Task after got the path.
