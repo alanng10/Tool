@@ -5,12 +5,23 @@ class Tool : Any
         base.Init();
         this.ListInfra : share ListInfra;
         this.ViewInfra : share ViewInfra;
+
+        this.TerminaPart : this.CreateTerminaPart();
         return true;
+    }
+
+    maide precate TerminaPart CreateTerminaPart()
+    {
+        var TerminaPart a;
+        a : new TerminaPart;
+        a.Init();
+        return a;
     }
 
     field prusate Frame Frame { get { return data; } set { data : value; } }
     field prusate ThreadThis ThreadThis { get { return data; } set { data : value; } }
     field prusate Table Table { get { return data; } set { data : value; } }
+    field prusate TerminaPart TerminaPart { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
     field precate ViewInfra ViewInfra { get { return data; } set { data : value; } }
 
@@ -47,10 +58,6 @@ class Tool : Any
         findPart : new FindPart;
         findPart.Init();
 
-        var TerminaPart terminaPart;
-        terminaPart : new TerminaPart;
-        terminaPart.Init();
-
         var List list;
         list : new List;
         list.Init();
@@ -59,7 +66,7 @@ class Tool : Any
         list.Add(problemPart);
         list.Add(docuePart);
         list.Add(findPart);
-        list.Add(terminaPart);
+        list.Add(this.TerminaPart);
 
         var Array array;
         array : this.ListInfra.ArrayCreateList(list);
