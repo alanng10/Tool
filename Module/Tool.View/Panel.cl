@@ -10,13 +10,13 @@ class Panel : Grid
         var Int width;
         width : 16 + 9;
 
-        var Int het;
-        het : 16 + 4;
+        var Int hegth;
+        hegth : 16 + 4;
 
         var Count row;
         row : new Count;
         row.Init();
-        row.Value : het;
+        row.Value : hegth;
 
         var Int i;
         i : 0;
@@ -59,7 +59,7 @@ class Panel : Grid
         this.Back : this.Palete.Back.Brush;
 
         this.Size.Width : count * width;
-        this.Size.Hegth : het;
+        this.Size.Hegth : hegth;
 
         return true;
     }
