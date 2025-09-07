@@ -7,8 +7,8 @@ class Panel : Grid
         var Int count;
         count : this.Command.Count;
 
-        var Int wed;
-        wed : 16 + 9;
+        var Int width;
+        width : 16 + 9;
 
         var Int het;
         het : 16 + 4;
@@ -25,7 +25,7 @@ class Panel : Grid
             var Count col;
             col : new Count;
             col.Init();
-            col.Value : wed;
+            col.Value : width;
 
             this.Col.Add(col);
 
@@ -58,7 +58,7 @@ class Panel : Grid
 
         this.Back : this.Palete.Back.Brush;
 
-        this.Size.Width : count * wed;
+        this.Size.Width : count * width;
         this.Size.Hegth : het;
 
         return true;
