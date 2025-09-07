@@ -36,6 +36,8 @@ Tool.View:0.00.00
     ToolViewInfra Infra
 Tool.Package:0.00.00
     PackagePart Part
+Tool.Struct:0.00.00
+    StructPart Part
 Tool.Problem:0.00.00
     ProblemPart Part
 Tool.Docue:0.00.00
