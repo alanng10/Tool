@@ -142,13 +142,13 @@ class Table : View
 
             headWidth : this.HeadWidth(part.Icon, nameCount, iconPos);
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + this.HeadNameAfterSpace, image.Size.Width);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + this.HeadNameAfterSpace + 2, image.Size.Width);
 
             this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
             this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col, iconPos);
 
-            col : col + headWidth + this.HeadNameAfterSpace;
+            col : col + headWidth + this.HeadNameAfterSpace + 2;
 
             i : i + 1;
         }
