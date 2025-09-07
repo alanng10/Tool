@@ -41,6 +41,10 @@ class Type : TypeType
         {
             kk : 4;
         }
+        inf (a = d.Digit6 & o)
+        {
+            kk : 5;
+        }
 
         inf (~(kk = null))
         {
