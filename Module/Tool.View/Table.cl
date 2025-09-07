@@ -145,7 +145,7 @@ class Table : View
 
             this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col, iconPos);
 
-            col : col + headWidth + 12;
+            col : col + headWidth + 6;
 
             i : i + 1;
         }
@@ -202,7 +202,7 @@ class Table : View
 
             this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col - kaa, iconPos);
 
-            col : col + headWidth + 12 + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Width - kaa;
+            col : col + headWidth + 6 + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Width - kaa;
 
             i : i + 1;
         }
