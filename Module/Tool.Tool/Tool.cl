@@ -78,7 +78,7 @@ class Tool : Any
         this.Table.Index : 0;
         this.Table.Pos.Col : 0;
         this.Table.Pos.Row : 0;
-        this.Table.Size.Wed : 1000;
+        this.Table.Size.Width : 1000;
         this.Table.Size.Het : 300;
 
         var Grid grid;
@@ -86,7 +86,7 @@ class Tool : Any
         grid.Init();
         grid.Pos.Col : 100;
         grid.Pos.Row : 50;
-        grid.Size.Wed : 1000;
+        grid.Size.Width : 1000;
         grid.Size.Het : 600;
 
         var Count colA;
@@ -120,7 +120,7 @@ class Tool : Any
         childA.Init();
         childA.Rect.Pos.Col : 0;
         childA.Rect.Pos.Row : 0;
-        childA.Rect.Size.Wed : 1;
+        childA.Rect.Size.Width : 1;
         childA.Rect.Size.Het : 1;
         childA.View : panel;
 
@@ -129,7 +129,7 @@ class Tool : Any
         childB.Init();
         childB.Rect.Pos.Col : 0;
         childB.Rect.Pos.Row : 1;
-        childB.Rect.Size.Wed : 1;
+        childB.Rect.Size.Width : 1;
         childB.Rect.Size.Het : 1;
         childB.View : this.Table;
 
