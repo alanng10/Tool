@@ -4,7 +4,7 @@ class Command : View
     {
         base.Init();
         this.Size.Width : this.Icon.Size.Count;
-        this.Size.Het : this.Icon.Size.Count;
+        this.Size.Hegth : this.Icon.Size.Count;
         return true;
     }
 
@@ -20,12 +20,12 @@ class Command : View
         this.DrawRectA.Pos.Col : this.Pos.Col;
         this.DrawRectA.Pos.Row : this.Pos.Row;
         this.DrawRectA.Size.Width : this.Icon.Size.Count;
-        this.DrawRectA.Size.Het : this.Icon.Size.Count;
+        this.DrawRectA.Size.Hegth : this.Icon.Size.Count;
 
         this.DrawRectB.Pos.Col : 0;
         this.DrawRectB.Pos.Row : 0;
         this.DrawRectB.Size.Width : this.Icon.Size.Count;
-        this.DrawRectB.Size.Het : this.Icon.Size.Count;
+        this.DrawRectB.Size.Hegth : this.Icon.Size.Count;
 
         draw.ExecuteImage(this.Icon.Image, this.DrawRectA, this.DrawRectB);
         return true;
