@@ -88,9 +88,9 @@ class Table : View
     maide precate Bool ExecuteDrawBord(var Draw draw)
     {
         this.DrawRectA.Pos.Col : this.Pos.Col + 1;
-        this.DrawRectA.Pos.Row : this.Pos.Row + this.ToolViewInfra.ImageTableHeadLite.Size.Het;
+        this.DrawRectA.Pos.Row : this.Pos.Row + this.ToolViewInfra.ImageTableHeadLite.Size.Hegth;
         this.DrawRectA.Size.Width : 1200;
-        this.DrawRectA.Size.Het : 2;
+        this.DrawRectA.Size.Hegth : 2;
 
         draw.Fill : this.ToolViewInfra.BrushTableBord;
 
@@ -230,7 +230,7 @@ class Table : View
         this.DrawRectA.Pos.Col : this.Pos.Col + col + beforeWed;
         this.DrawRectA.Pos.Row : this.Pos.Row;
         this.DrawRectA.Size.Width : midWed;
-        this.DrawRectA.Size.Het : brush.Image.Size.Het;
+        this.DrawRectA.Size.Hegth : brush.Image.Size.Hegth;
 
         draw.ExecuteRect(this.DrawRectA);
 
@@ -255,7 +255,7 @@ class Table : View
         this.DrawRectA.Pos.Col : this.Pos.Col + col + iconCol + part.Icon.Size.Count + 5;
         this.DrawRectA.Pos.Row : this.Pos.Row + 5;
         this.DrawRectA.Size.Width : 8 * this.Text.Range.Count;
-        this.DrawRectA.Size.Het : 15;
+        this.DrawRectA.Size.Hegth : 15;
 
         draw.Font : this.Palete.FontMono;
 
@@ -278,12 +278,12 @@ class Table : View
         this.DrawRectA.Pos.Col : this.Pos.Col + col;
         this.DrawRectA.Pos.Row : this.Pos.Row + row;
         this.DrawRectA.Size.Width : image.Size.Width;
-        this.DrawRectA.Size.Het : image.Size.Het;
+        this.DrawRectA.Size.Hegth : image.Size.Hegth;
 
         this.DrawRectB.Pos.Col : 0;
         this.DrawRectB.Pos.Row : 0;
         this.DrawRectB.Size.Width : image.Size.Width;
-        this.DrawRectB.Size.Het : image.Size.Het;
+        this.DrawRectB.Size.Hegth : image.Size.Hegth;
 
         draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
         return true;
