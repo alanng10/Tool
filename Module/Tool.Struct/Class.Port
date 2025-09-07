@@ -1,5 +1,5 @@
 [Module]
-Tool.Package:0.00.00
+Tool.Struct:0.00.00
 
 [Import]
 System.Infra
