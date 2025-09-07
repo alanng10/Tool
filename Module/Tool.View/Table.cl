@@ -10,6 +10,8 @@ class Table : View
         this.IndexField : this.CreateIndexField();
         this.Text : this.CreateText();
         this.StringData : this.CreateStringData();
+
+        this.HeadNameAfterSpace : 0;
         return true;
     }
 
@@ -42,6 +44,7 @@ class Table : View
     field precate DrawAlignList DrawAlignList { get { return data; } set { data : value; } }
     field precate TextText Text { get { return data; } set { data : value; } }
     field precate StringData StringData { get { return data; } set { data : value; } }
+    field precate Int HeadNameAfterSpace { get { return data; } set { data : value; } }
 
     field prusate Field IndexField { get { return data; } set { data : value; } }
 
@@ -139,13 +142,13 @@ class Table : View
 
             headWidth : this.HeadWidth(part.Icon, nameCount, iconPos);
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + 3, image.Size.Width);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + this.HeadNameAfterSpace, image.Size.Width);
 
             this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
             this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col, iconPos);
 
-            col : col + headWidth + 3;
+            col : col + headWidth + this.HeadNameAfterSpace;
 
             i : i + 1;
         }
@@ -194,15 +197,15 @@ class Table : View
                 kaa : 9;
             }
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + 3 - kaa, 0);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + this.HeadNameAfterSpace - kaa, 0);
 
-            this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadAfterRite, col + headWidth + 3 - kaa, 0);
+            this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadAfterRite, col + headWidth + this.HeadNameAfterSpace - kaa, 0);
 
             this.ExecuteDrawHeadIcon(draw, part, col - kaa, iconPos, iconPos);
 
             this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col - kaa, iconPos);
 
-            col : col + headWidth + 3 + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Width - kaa;
+            col : col + headWidth + this.HeadNameAfterSpace + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Width - kaa;
 
             i : i + 1;
         }
