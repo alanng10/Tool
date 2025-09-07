@@ -111,7 +111,7 @@ class Table : View
 
         var Int nameCount;
 
-        var Int headWed;
+        var Int headWidth;
 
         var Int col;
         col : 0;
@@ -137,15 +137,15 @@ class Table : View
 
             this.ExecuteDrawHeadImage(draw, image, col, 0);
 
-            headWed : this.HeadWed(part.Icon, nameCount, iconPos);
+            headWidth : this.HeadWidth(part.Icon, nameCount, iconPos);
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWed + 12, image.Size.Width);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + 12, image.Size.Width);
 
             this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
             this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col, iconPos);
 
-            col : col + headWed + 12;
+            col : col + headWidth + 12;
 
             i : i + 1;
         }
@@ -165,17 +165,17 @@ class Table : View
 
         this.ExecuteDrawHeadImage(draw, image, col, 0);
 
-        headWed : this.HeadWed(part.Icon, nameCount, iconPos);
+        headWidth : this.HeadWidth(part.Icon, nameCount, iconPos);
 
-        this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadMid, col, headWed, image.Size.Width);
+        this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadMid, col, headWidth, image.Size.Width);
 
-        this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadRite, col + headWed, 0);
+        this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadRite, col + headWidth, 0);
 
         this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
         this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashWhite, col, iconPos);
 
-        col : col + headWed + this.ToolViewInfra.ImageTableHeadRite.Size.Width;
+        col : col + headWidth + this.ToolViewInfra.ImageTableHeadRite.Size.Width;
 
         i : this.Index + 1;
 
@@ -185,7 +185,7 @@ class Table : View
 
             nameCount : this.StringComp.Count(part.Name);
 
-            headWed : this.HeadWed(part.Icon, nameCount, iconPos);
+            headWidth : this.HeadWidth(part.Icon, nameCount, iconPos);
 
             var Int kaa;
             kaa : 0;
@@ -194,15 +194,15 @@ class Table : View
                 kaa : 9;
             }
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWed + 12 - kaa, 0);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + 12 - kaa, 0);
 
-            this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadAfterRite, col + headWed + 12 - kaa, 0);
+            this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadAfterRite, col + headWidth + 12 - kaa, 0);
 
             this.ExecuteDrawHeadIcon(draw, part, col - kaa, iconPos, iconPos);
 
             this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col - kaa, iconPos);
 
-            col : col + headWed + 12 + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Width - kaa;
+            col : col + headWidth + 12 + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Width - kaa;
 
             i : i + 1;
         }
@@ -210,16 +210,16 @@ class Table : View
         return true;
     }
 
-    maide precate Int HeadWed(var Icon icon, var Int nameCount, var Int iconCol)
+    maide precate Int HeadWidth(var Icon icon, var Int nameCount, var Int iconCol)
     {
         return iconCol + icon.Size.Count + 5 + nameCount * 8;
     }
 
-    maide precate Bool ExecuteDrawHeadMid(var Draw draw, var DrawBrush brush, var Int col, var Int wed, var Int beforeWed)
+    maide precate Bool ExecuteDrawHeadMid(var Draw draw, var DrawBrush brush, var Int col, var Int wed, var Int beforeWidth)
     {
-        var Int midWed;
-        midWed : wed;
-        midWed : midWed - beforeWed;
+        var Int midWidth;
+        midWidth : wed;
+        midWidth : midWidth - beforeWidth;
 
         draw.Fill : brush;
 
@@ -227,9 +227,9 @@ class Table : View
         draw.FillPos.Row : this.MathInt(this.Pos.Row);
         draw.FillPosSet();
 
-        this.DrawRectA.Pos.Col : this.Pos.Col + col + beforeWed;
+        this.DrawRectA.Pos.Col : this.Pos.Col + col + beforeWidth;
         this.DrawRectA.Pos.Row : this.Pos.Row;
-        this.DrawRectA.Size.Width : midWed;
+        this.DrawRectA.Size.Width : midWidth;
         this.DrawRectA.Size.Hegth : brush.Image.Size.Hegth;
 
         draw.ExecuteRect(this.DrawRectA);
