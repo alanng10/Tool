@@ -6,8 +6,17 @@ class Tool : Any
         this.ListInfra : share ListInfra;
         this.ViewInfra : share ViewInfra;
 
+        this.StructPart : this.CreateStructPart();
         this.TerminaPart : this.CreateTerminaPart();
         return true;
+    }
+
+    maide precate StructPart CreateStructPart()
+    {
+        var StructPart a;
+        a : new StructPart;
+        a.Init();
+        return a;
     }
 
     maide precate TerminaPart CreateTerminaPart()
@@ -21,6 +30,7 @@ class Tool : Any
     field prusate Frame Frame { get { return data; } set { data : value; } }
     field prusate ThreadThis ThreadThis { get { return data; } set { data : value; } }
     field prusate Table Table { get { return data; } set { data : value; } }
+    field prusate StructPart StructPart { get { return data; } set { data : value; } }
     field prusate TerminaPart TerminaPart { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
     field precate ViewInfra ViewInfra { get { return data; } set { data : value; } }
@@ -63,6 +73,7 @@ class Tool : Any
         list.Init();
 
         list.Add(packagePart);
+        list.Add(this.StructPart);
         list.Add(problemPart);
         list.Add(docuePart);
         list.Add(findPart);
