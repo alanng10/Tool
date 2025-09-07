@@ -139,7 +139,7 @@ class Table : View
 
             headWidth : this.HeadWidth(part.Icon, nameCount, iconPos);
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + 12, image.Size.Width);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + 6, image.Size.Width);
 
             this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
@@ -194,9 +194,9 @@ class Table : View
                 kaa : 9;
             }
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + 12 - kaa, 0);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWidth + 6 - kaa, 0);
 
-            this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadAfterRite, col + headWidth + 12 - kaa, 0);
+            this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadAfterRite, col + headWidth + 6 - kaa, 0);
 
             this.ExecuteDrawHeadIcon(draw, part, col - kaa, iconPos, iconPos);
 
