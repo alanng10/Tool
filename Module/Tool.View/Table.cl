@@ -215,10 +215,10 @@ class Table : View
         return iconCol + icon.Size.Count + 5 + nameCount * 8;
     }
 
-    maide precate Bool ExecuteDrawHeadMid(var Draw draw, var DrawBrush brush, var Int col, var Int wed, var Int beforeWidth)
+    maide precate Bool ExecuteDrawHeadMid(var Draw draw, var DrawBrush brush, var Int col, var Int width, var Int beforeWidth)
     {
         var Int midWidth;
-        midWidth : wed;
+        midWidth : width;
         midWidth : midWidth - beforeWidth;
 
         draw.Fill : brush;
