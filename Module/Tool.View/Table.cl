@@ -252,7 +252,7 @@ class Table : View
         this.Text.Range.Index : 0;
         this.Text.Range.Count : this.StringComp.Count(part.Name);
 
-        this.DrawRectA.Pos.Col : this.Pos.Col + col + iconCol + part.Icon.Size.Count + 5;
+        this.DrawRectA.Pos.Col : this.Pos.Col + col + iconCol + part.Icon.Size.Count + 3;
         this.DrawRectA.Pos.Row : this.Pos.Row + 5;
         this.DrawRectA.Size.Width : 8 * this.Text.Range.Count;
         this.DrawRectA.Size.Hegth : 15;
