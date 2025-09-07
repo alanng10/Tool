@@ -48,7 +48,7 @@ class Panel : Grid
             child.Rect.Pos.Col : i;
             child.Rect.Pos.Row : 0;
             child.Rect.Size.Width : 1;
-            child.Rect.Size.Het : 1;
+            child.Rect.Size.Hegth : 1;
             child.View : command;
 
             this.ChildList.Add(child);
@@ -59,7 +59,7 @@ class Panel : Grid
         this.Back : this.Palete.Back.Brush;
 
         this.Size.Width : count * wed;
-        this.Size.Het : het;
+        this.Size.Hegth : het;
 
         return true;
     }
