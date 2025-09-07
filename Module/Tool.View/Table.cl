@@ -89,7 +89,7 @@ class Table : View
     {
         this.DrawRectA.Pos.Col : this.Pos.Col + 1;
         this.DrawRectA.Pos.Row : this.Pos.Row + this.ToolViewInfra.ImageTableHeadLite.Size.Het;
-        this.DrawRectA.Size.Wed : 1200;
+        this.DrawRectA.Size.Width : 1200;
         this.DrawRectA.Size.Het : 2;
 
         draw.Fill : this.ToolViewInfra.BrushTableBord;
@@ -139,7 +139,7 @@ class Table : View
 
             headWed : this.HeadWed(part.Icon, nameCount, iconPos);
 
-            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWed + 12, image.Size.Wed);
+            this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadBeforeMid, col, headWed + 12, image.Size.Width);
 
             this.ExecuteDrawHeadIcon(draw, part, col, iconPos, iconPos);
 
@@ -154,7 +154,7 @@ class Table : View
         {
             this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadBeforeRite, col, 0);
 
-            col : col + this.ToolViewInfra.ImageTableHeadBeforeRite.Size.Wed;
+            col : col + this.ToolViewInfra.ImageTableHeadBeforeRite.Size.Width;
         }
 
         part : cast Part(this.Part.Get(this.Index));
@@ -167,7 +167,7 @@ class Table : View
 
         headWed : this.HeadWed(part.Icon, nameCount, iconPos);
 
-        this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadMid, col, headWed, image.Size.Wed);
+        this.ExecuteDrawHeadMid(draw, this.ToolViewInfra.BrushTableHeadMid, col, headWed, image.Size.Width);
 
         this.ExecuteDrawHeadImage(draw, this.ToolViewInfra.ImageTableHeadRite, col + headWed, 0);
 
@@ -175,7 +175,7 @@ class Table : View
 
         this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashWhite, col, iconPos);
 
-        col : col + headWed + this.ToolViewInfra.ImageTableHeadRite.Size.Wed;
+        col : col + headWed + this.ToolViewInfra.ImageTableHeadRite.Size.Width;
 
         i : this.Index + 1;
 
@@ -202,7 +202,7 @@ class Table : View
 
             this.ExecuteDrawHeadName(draw, part, this.DrawInfra.SlashBlack, col - kaa, iconPos);
 
-            col : col + headWed + 12 + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Wed - kaa;
+            col : col + headWed + 12 + this.ToolViewInfra.ImageTableHeadAfterRite.Size.Width - kaa;
 
             i : i + 1;
         }
@@ -229,7 +229,7 @@ class Table : View
 
         this.DrawRectA.Pos.Col : this.Pos.Col + col + beforeWed;
         this.DrawRectA.Pos.Row : this.Pos.Row;
-        this.DrawRectA.Size.Wed : midWed;
+        this.DrawRectA.Size.Width : midWed;
         this.DrawRectA.Size.Het : brush.Image.Size.Het;
 
         draw.ExecuteRect(this.DrawRectA);
@@ -254,7 +254,7 @@ class Table : View
 
         this.DrawRectA.Pos.Col : this.Pos.Col + col + iconCol + part.Icon.Size.Count + 5;
         this.DrawRectA.Pos.Row : this.Pos.Row + 5;
-        this.DrawRectA.Size.Wed : 8 * this.Text.Range.Count;
+        this.DrawRectA.Size.Width : 8 * this.Text.Range.Count;
         this.DrawRectA.Size.Het : 15;
 
         draw.Font : this.Palete.FontMono;
@@ -277,12 +277,12 @@ class Table : View
     {
         this.DrawRectA.Pos.Col : this.Pos.Col + col;
         this.DrawRectA.Pos.Row : this.Pos.Row + row;
-        this.DrawRectA.Size.Wed : image.Size.Wed;
+        this.DrawRectA.Size.Width : image.Size.Width;
         this.DrawRectA.Size.Het : image.Size.Het;
 
         this.DrawRectB.Pos.Col : 0;
         this.DrawRectB.Pos.Row : 0;
-        this.DrawRectB.Size.Wed : image.Size.Wed;
+        this.DrawRectB.Size.Width : image.Size.Width;
         this.DrawRectB.Size.Het : image.Size.Het;
 
         draw.ExecuteImage(image, this.DrawRectA, this.DrawRectB);
