@@ -69,16 +69,11 @@ Tool has park word.
 The word is "Tool".
 
 The word has spell.
-
-The word first letter "T" refers to Thin Animi.
-
-The word second letter "o" refers to operate diret.
-
-The word third letter "o" refers to operate engin.
-
-The word fourth letter "l" refers to list unon.
-
-The word spell is Thin Animi operate diret operate engin list unon.
+The spell is:
+"T" for Time Execute.
+"o" for offer module.
+"o" for offer class.
+"l" for land effect.
 
 Tool arch is Model View Plat.
 
