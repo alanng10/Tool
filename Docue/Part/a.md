@@ -12,7 +12,7 @@ Tool has struct part.
 
 Tool has version part.
 
-Tool has article part.
+Tool has docue part.
 
 Tool has find part.
 
